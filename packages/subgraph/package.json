@@ -1,19 +1,19 @@
 {
-  "name": "@web3-dapp-scaffold/subgraph",
-  "private":true,
+  "name": "@web3-scaffold/subgraph",
+  "private": true,
+  "engines": {
+    "node": "16",
+    "pnpm": "7"
+  },
   "scripts": {
     "codegen": "graph codegen subgraph*.yaml",
-    "build": "graph build subgraph*.yaml",
-    "deploy:matic": "graph deploy --node https://api.thegraph.com/deploy/ holic/example-nft subgraph-matic.yaml",
-    "deploy:mumbai": "graph deploy --node https://api.thegraph.com/deploy/ holic/example-nft-testnet subgraph-mumbai.yaml"
+    "build": "pnpm codegen && graph build subgraph*.yaml",
+    "deploy:goerli": "graph deploy --node https://api.thegraph.com/deploy/ holic/example-nft subgraph-goerli.yaml",
+    "prettier": "prettier --write src",
+    "lint": "eslint src"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.25.1",
-    "@graphprotocol/graph-ts": "0.24.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "typescript": "^4.5.4"
+    "@graphprotocol/graph-cli": "0.30.4",
+    "@graphprotocol/graph-ts": "0.27.0"
   }
 }

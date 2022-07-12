@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { toast } from "react-toastify";
 import { useAccount } from "wagmi";
 
@@ -9,7 +10,15 @@ import { promiseNotify } from "./promiseNotify";
 import { switchChain } from "./switchChain";
 import { usePromiseFn } from "./usePromiseFn";
 
-export const MintButton = () => {
+type Props = {
+  id: number;
+  title: string;
+  image: string;
+  width: number;
+  height: number;
+};
+
+export const MintButton = ({ id, title, image, width, height }: Props) => {
   const { connector } = useAccount();
 
   const [mintResult, mint] = usePromiseFn(
@@ -22,15 +31,13 @@ export const MintButton = () => {
       await switchChain(connector);
       const signer = await connector.getSigner();
       const contract = webbNFTContract.connect(signer);
-      const price = await contract.PRICE();
 
       try {
         onProgress(`Minting ${pluralize(quantity, "token", "tokens")}…`);
 
-        const tx = await promiseNotify(
-          contract.mint(quantity, { value: price.mul(quantity) })
-        ).after(1000 * 5, () =>
-          onProgress("Please confirm transaction in your wallet…")
+        const tx = await promiseNotify(contract.mint(quantity)).after(
+          1000 * 5,
+          () => onProgress("Please confirm transaction in your wallet…")
         );
         console.log("mint tx", tx);
 
@@ -55,37 +62,46 @@ export const MintButton = () => {
   );
 
   return (
-    <Button
-      pending={mintResult.type === "pending"}
-      onClick={(event) => {
-        event.preventDefault();
-        const toastId = toast.loading("Starting…");
-        mint(1, (message) => {
-          toast.update(toastId, { render: message });
-        }).then(
-          () => {
-            // TODO: show etherscan link?
-            toast.update(toastId, {
-              isLoading: false,
-              type: "success",
-              render: `Minted!`,
-              autoClose: 5000,
-              closeButton: true,
-            });
-          },
-          (error) => {
-            toast.update(toastId, {
-              isLoading: false,
-              type: "error",
-              render: String(error.message),
-              autoClose: 5000,
-              closeButton: true,
-            });
-          }
-        );
-      }}
-    >
-      Mint a token
-    </Button>
+    <div className="relative w-full mt-4">
+      <h2 className="text-2xl font-bold pb-2">
+        {title} (#{id})
+      </h2>
+
+      <Image src={image} width={width} height={height} alt={title} />
+
+      <Button
+        className="absolute top-12 right-4"
+        pending={mintResult.type === "pending"}
+        onClick={(event) => {
+          event.preventDefault();
+          const toastId = toast.loading("Starting…");
+          mint(1, (message) => {
+            toast.update(toastId, { render: message });
+          }).then(
+            () => {
+              // TODO: show etherscan link?
+              toast.update(toastId, {
+                isLoading: false,
+                type: "success",
+                render: `Minted!`,
+                autoClose: 5000,
+                closeButton: true,
+              });
+            },
+            (error) => {
+              toast.update(toastId, {
+                isLoading: false,
+                type: "error",
+                render: String(error.message),
+                autoClose: 5000,
+                closeButton: true,
+              });
+            }
+          );
+        }}
+      >
+        Mint
+      </Button>
+    </div>
   );
 };

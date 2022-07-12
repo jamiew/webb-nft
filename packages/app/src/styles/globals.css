@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --toastify-color-info: #e1e5e7;
+  --toastify-color-success: #488025;
+  --toastify-color-warning: #e2b32d;
+  --toastify-color-error: #e74c40;
+  --toastify-font-family: inherit;
+}
+
+@font-face {
+  font-family: "AntiqueOliveNord";
+  src: url("/fonts/AntiqueOliveNord.woff2") format("woff2"),
+    url("/fonts/AntiqueOliveNord.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  /* Fixes a bug with rainbowkit dependency package that removes the scroll bar */
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+}
+
+#container {
+  max-width: 800px;
+  @apply mx-auto;
+}

@@ -1,2 +1,1 @@
 forge-std/=packages/contracts/lib/forge-std/src/
-solmate/=packages/contracts/lib/solmate/src/

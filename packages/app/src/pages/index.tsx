@@ -1,18 +1,11 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import type { NextPage } from "next";
 
-import { useExampleNFTContractRead } from "../contracts";
-import { Inventory } from "../Inventory";
+import { useWebbNFTContractRead } from "../contracts";
 import { MintButton } from "../MintButton";
 import { useIsMounted } from "../useIsMounted";
 
 const HomePage: NextPage = () => {
-  const totalSupply = useExampleNFTContractRead({
-    functionName: "totalSupply",
-    watch: true,
-  });
-  const maxSupply = useExampleNFTContractRead({ functionName: "MAX_SUPPLY" });
-
   const isMounted = useIsMounted();
 
   return (
@@ -27,16 +20,12 @@ const HomePage: NextPage = () => {
         server-rendered markup doesn't match the client due to localStorage
         caching in wagmi. See https://github.com/holic/web3-scaffold/pull/26 */}
         <p>
-          {(isMounted ? totalSupply.data?.toNumber().toLocaleString() : null) ??
-            "??"}
-          /
-          {(isMounted ? maxSupply.data?.toNumber().toLocaleString() : null) ??
-            "??"}{" "}
-          minted
+          hi
+          {/* {(isMounted ? totalSupply.data?.toNumber().toLocaleString() : null) ??
+            "??"} */}
         </p>
 
         <MintButton />
-        <Inventory />
       </div>
     </div>
   );

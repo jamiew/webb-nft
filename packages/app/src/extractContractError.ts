@@ -1,6 +1,6 @@
-import { ExampleNFT__factory } from "@web3-scaffold/contracts/types";
+import { WebbNFT__factory } from "@web3-scaffold/contracts/types";
 
-const contractInterface = ExampleNFT__factory.createInterface();
+const contractInterface = WebbNFT__factory.createInterface();
 
 // for (const [error, errorFragment] of Object.entries(contractInterface.errors)) {
 //   console.log(contractInterface.getSighash(errorFragment), errorFragment.name);

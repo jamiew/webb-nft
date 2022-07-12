@@ -1,6 +1,6 @@
 # Getting Started
 
-web3-scaffold works *almost* out of the box, so install and experiement. The ExampleNFT contract is already deployed and ready to interact with : ) 
+web3-scaffold works *almost* out of the box, so install and experiement. The WebbNFT contract is already deployed and ready to interact with : )
 
 ## First time setup
 
@@ -39,7 +39,7 @@ Here's a quick guide on how to start customizing your app.
     - i.e. MyContract.sol
 4. Run `forge build` or `forge test` from the root directory
     - You need to build your contract at least once
-5. Update the `./packages/contracts/deploy.sh` script to use the proper contract name and any require constructor args. Below is an example: 
+5. Update the `./packages/contracts/deploy.sh` script to use the proper contract name and any require constructor args. Below is an example:
 
 ```bash
 CONTRACT_NAME="MyContract"
@@ -73,13 +73,13 @@ fi
     - There are several places to update, FYI!
 
 3. Open `packages/app/contracts.ts`
-    - Replace mentions of `ExampleNFT` with your app name
+    - Replace mentions of `WebbNFT` with your app name
     - Update imports to ensure it is using your contract
 4. Open `packages/app/pages/index.tsx` and update any imports to point to your new contract
 5. Open `packages/app/extractContractError.ts` and update the factory import for your smart contact
 6. Open `packages/app/src/Inventory.tsx` and update the contract import
 
-At this point you're on your own! You'll find additional references to `ExampleNFT` related imports throughout the app. As you start to use these components, update them to your needs : ) 
+At this point you're on your own! You'll find additional references to `WebbNFT` related imports throughout the app. As you start to use these components, update them to your needs : )
 
 ## Customizing the subgraph
 

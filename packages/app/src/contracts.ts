@@ -1,24 +1,26 @@
-import ExampleNFTGoerli from "@web3-scaffold/contracts/deploys/goerli/ExampleNFT.json";
-import { ExampleNFT__factory } from "@web3-scaffold/contracts/types";
+import WebbNFTInterface from "@web3-scaffold/contracts/out/WebbNFT.sol/WebbNFT.json";
+import { WebbNFT__factory } from "@web3-scaffold/contracts/types";
 import { useContractRead } from "wagmi";
 
 import { provider, targetChainId } from "./EthereumProviders";
 
-// I would have used `ExampleNFT__factory.connect` to create this, but we may
+// I would have used `WebbNFT__factory.connect` to create this, but we may
 // not have a provider ready to go. Any interactions with this contract should
-// use `exampleNFTContract.connect(providerOrSigner)` first.
+// use `webbNFTContract.connect(providerOrSigner)` first.
 
-// export const exampleNFTContract = new Contract(
-//   ExampleNFTGoerli.deployedTo,
-//   ExampleNFT__factory.abi
-// ) as ExampleNFT;
+// export const webbNFTContract = new Contract(
+//   WebbNFTGoerli.deployedTo,
+//   WebbNFT__factory.abi
+// ) as WebbNFT;
 
-export const exampleNFTContract = ExampleNFT__factory.connect(
-  ExampleNFTGoerli.deployedTo,
+const contractAddress = "0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358"
+
+export const webbNFTContract = WebbNFT__factory.connect(
+  contractAddress,
   provider({ chainId: targetChainId })
 );
 
-export const useExampleNFTContractRead = (
+export const useWebbNFTContractRead = (
   readConfig: Omit<
     Parameters<typeof useContractRead>[0],
     "addressOrName" | "contractInterface"
@@ -26,6 +28,6 @@ export const useExampleNFTContractRead = (
 ) =>
   useContractRead({
     ...readConfig,
-    addressOrName: ExampleNFTGoerli.deployedTo,
-    contractInterface: ExampleNFT__factory.abi,
+    addressOrName: contractAddress,
+    contractInterface: WebbNFTInterface.abi,
   });

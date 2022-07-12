@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 import { useAccount } from "wagmi";
 
 import { Button } from "./Button";
-import { exampleNFTContract } from "./contracts";
+import { webbNFTContract } from "./contracts";
 import { extractContractError } from "./extractContractError";
 import { pluralize } from "./pluralize";
 import { promiseNotify } from "./promiseNotify";
@@ -21,7 +21,7 @@ export const MintButton = () => {
       onProgress("Preparing wallet…");
       await switchChain(connector);
       const signer = await connector.getSigner();
-      const contract = exampleNFTContract.connect(signer);
+      const contract = webbNFTContract.connect(signer);
       const price = await contract.PRICE();
 
       try {

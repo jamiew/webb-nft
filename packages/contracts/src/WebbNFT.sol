@@ -3,7 +3,6 @@ pragma solidity ^0.8.15;
 
 import {Owned} from "solmate/auth/Owned.sol";
 import {ERC1155} from "solmate/tokens/ERC1155.sol";
-import "forge-std/console2.sol";
 
 contract WebbNFT is Owned, ERC1155 {
     string public baseURI;
@@ -37,7 +36,6 @@ contract WebbNFT is Owned, ERC1155 {
     }
 
     function mint(uint256 id) public tokenExists(id) {
-        console2.log("hello from mint() sender=%s id=%s", msg.sender, id);
         _mint(msg.sender, id, 1, "");
     }
 
@@ -48,7 +46,7 @@ contract WebbNFT is Owned, ERC1155 {
         tokenExists(id)
         returns (string memory)
     {
-        return string.concat(baseURI, Strings.toString(id), ".jpg");
+        return string.concat(baseURI, Strings.toString(id));
     }
 }
 

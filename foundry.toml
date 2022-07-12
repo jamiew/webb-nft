@@ -14,3 +14,4 @@ verbosity = 2
 bytecode_hash = 'none'
 solc_version = '0.8.15'
 extra_output_files = ['abi']
+optimzer_runs = 2000

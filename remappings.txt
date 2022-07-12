@@ -1,1 +1,3 @@
+ds-test/=packages/contracts/lib/solmate/lib/ds-test/src/
 forge-std/=packages/contracts/lib/forge-std/src/
+solmate/=packages/contracts/lib/solmate/src/

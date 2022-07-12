@@ -17,5 +17,6 @@
   "solidity.packageDefaultDependenciesDirectory": "packages/contracts/lib",
   "search.exclude": {
     "packages/contracts/lib": true
-  }
+  },
+  "solidity.compileUsingRemoteVersion": "v0.8.15+commit.e14f2714"
 }

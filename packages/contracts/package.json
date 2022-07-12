@@ -6,7 +6,7 @@
     "pnpm": "7"
   },
   "scripts": {
-    "test": "forge test --no-match-contract Forked",
+    "test": "forge test --no-match-contract Forked -vv",
     "test:fork": "source .env && forge test --fork-url $RPC_URL --match-contract Forked",
     "clean": "rm -rf types",
     "build": "pnpm clean && pnpm compile && pnpm types",

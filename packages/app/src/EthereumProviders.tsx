@@ -8,7 +8,8 @@ import { publicProvider } from "wagmi/providers/public";
 export const targetChainId = parseInt(process.env.CHAIN_ID || "0") || 5;
 
 export const { chains, provider, webSocketProvider } = configureChains(
-  [chain.mainnet, chain.goerli],
+  // [chain.mainnet, chain.goerli],
+  [chain.mainnet],
   [
     alchemyProvider({ alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY }),
     publicProvider(),

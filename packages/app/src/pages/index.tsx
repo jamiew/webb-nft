@@ -39,7 +39,7 @@ const HomePage: NextPage = () => {
             detail={
               "https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg"
             }
-            description={`Light from galaxies 4.6 billion years old. "Webb's First Deep Field"`}
+            description={`As it appeared 4.6 billion years ago. "Webb's First Deep Field"`}
             image={"/thumbnails/1.jpg"}
             width={1600}
             height={1632}

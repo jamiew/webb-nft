@@ -33,9 +33,8 @@ To deploy contracts, check out `packages/contracts/script/WebbNFT.s.sol`
 
 There's no frontend yet
 
-
 ## License
 
 All source code here is (c) 2022 [@jamiew](https://jamiedubs.com/) and made freely available under an [MIT license](https://opensource.org/licenses/MIT)
 
-Images are (c) [NASA/Webb Space Telescope](https://nasa.gov) and [available in the public domain](https://webbtelescope.org/copyright) <3
+Images are (c) [NASA/STScI](https://nasa.gov) and [available in the public domain](https://webbtelescope.org/copyright) <3

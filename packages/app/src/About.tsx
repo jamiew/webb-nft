@@ -37,7 +37,8 @@ export const About = () => {
       </p>
 
       <p>
-        Images &copy; 2022 NASA and available in the{" "}
+        Images &copy; 2022 [NASA/STScI](https://webbtelescope.org) and [available in the public domain](https://webbtelescope.org/copyright) <3
+
         <a
           href="https://webbtelescope.org/copyright"
           target="_blank"

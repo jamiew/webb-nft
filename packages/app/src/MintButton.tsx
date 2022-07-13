@@ -42,7 +42,7 @@ export const MintButton = ({ id, title, image, width, height }: Props) => {
         console.log("mint tx", tx);
 
         onProgress("Finalizing transaction…");
-        const receipt = await promiseNotify(tx.wait())
+        const receipt = await promiseNotify(tx?.wait())
           .after(1000 * 15, () =>
             onProgress(
               "It can sometimes take a while to finalize a transaction…"

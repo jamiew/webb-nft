@@ -23,12 +23,12 @@ const HomePage: NextPage = () => {
         {/* <h1 className="text-4xl"></h1> */}
         <div
           id="about"
-          className="flex-col flex-shrink md:pt-20 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-8 md:px-0"
+          className="flex-col flex-shrink md:pt-24 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-4 md:pl-8 md:pr-4"
         >
           <About />
         </div>
 
-        <div className="flex-grow flex flex-col gap-4 items-center justify-center p-8 pb-[10vh] max-w-[50rem] mx-auto">
+        <div className="flex-grow flex flex-col gap-4 items-center justify-center px-4 md:px-0 pt-6 pb-[10vh] max-w-[50rem] mx-auto">
           {/* Use isMounted to temporarily workaround hydration issues where
           server-rendered markup doesn't match the client due to localStorage
           caching in wagmi. See https://github.com/holic/web3-scaffold/pull/26 */}

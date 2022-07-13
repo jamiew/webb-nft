@@ -12,7 +12,11 @@ export const About = () => {
           Learn more.
         </a>
       </p>
-      <p>Free mint, 100% open-source, please enjoy</p>
+      <p>Free mint, 100% open-source, please enjoy.</p>
+      <p>
+        By <a href="https://twitter.com/jamiew">jamiedubs</a> &{" "}
+        <a href="https://defdao.xyz">DEF</a>
+      </p>
       <p>
         <a
           href="https://goerli.etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358"
@@ -29,10 +33,6 @@ export const About = () => {
         >
           Full source code
         </a>{" "}
-      </p>
-      <p>
-        By <a href="https://twitter.com/jamiew">jamiedubs</a> &{" "}
-        <a href="https://defdao.xyz">DEF</a>
       </p>
 
       <p>

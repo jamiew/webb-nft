@@ -78,7 +78,7 @@ export const MintButton = ({
         {title} (#{id})
       </h2>
       {description && (
-        <p className="description text-sm">
+        <p className="description">
           {description}{" "}
           {detail && (
             <a href={detail} target="_blank" rel="noreferrer">

@@ -13,10 +13,8 @@ contract WebbNFTTest is Test {
         vm.addr(uint256(keccak256(abi.encodePacked("minter"))));
 
     function setUp() public {
-        console2.log("hi");
         nft = new WebbNFT("ipfs://lol", 5);
 
-        console2.log("setting owner...");
         nft.setOwner(owner);
         assertEq(nft.owner(), owner);
 
@@ -91,7 +89,6 @@ contract WebbNFTTest is Test {
     function testUri() public {
         vm.prank(owner);
         nft.setBaseURI("ipfs://ok/");
-        console2.log("nft.uri(1)", nft.uri(1));
         assertEq(nft.uri(1), "ipfs://ok/1");
     }
 

@@ -707,6 +707,13 @@
   },
   {
     "inputs": [],
+    "name": "testName",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "testSetBaseURI",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -722,6 +729,13 @@
   {
     "inputs": [],
     "name": "testSetMaxID",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "testSymbol",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

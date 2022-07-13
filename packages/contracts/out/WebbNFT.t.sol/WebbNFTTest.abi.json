@@ -700,7 +700,21 @@
   },
   {
     "inputs": [],
+    "name": "testMintFailsIfDisabled",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "testSetBaseURI",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "testSetEnabled",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

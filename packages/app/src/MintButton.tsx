@@ -37,17 +37,16 @@ export const MintButton = ({
         throw new Error("Wallet not connected");
       }
 
-      onProgress("Preparing wallet…");
+      onProgress(`Preparing wallet…`);
       await switchChain(connector);
       const signer = await connector.getSigner();
       const contract = webbNFTContract.connect(signer);
 
       try {
-        onProgress(`Minting ${pluralize(quantity, "token", "tokens")}…`);
+        onProgress(`Minting token #${id}…`);
 
-        const tx = await promiseNotify(contract.mint(quantity)).after(
-          1000 * 5,
-          () => onProgress("Please confirm transaction in your wallet…")
+        const tx = await promiseNotify(contract.mint(id)).after(1000 * 5, () =>
+          onProgress("Please confirm transaction in your wallet…")
         );
         console.log("mint tx", tx);
 

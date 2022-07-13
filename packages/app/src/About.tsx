@@ -5,7 +5,7 @@ export const About = () => {
         Commemorative NFTs to celebrate the first images collected by the James
         Webb Space Telescope (JWST).{" "}
         <a
-          href="https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-delivers-deepest-infrared-image-of-universe-yet"
+          href="https://www.nasa.gov/webbfirstimages"
           target="_blank"
           rel="noreferrer"
         >
@@ -36,7 +36,16 @@ export const About = () => {
         <a href="https://defdao.xyz">DEF</a>
       </p>
 
-      <p>Images &copy; 2022 NASA and available in the public domain</p>
+      <p>
+        Images &copy; 2022 NASA and available in the{" "}
+        <a
+          href="https://webbtelescope.org/copyright"
+          target="_blank"
+          rel="noreferrer"
+        >
+          public domain
+        </a>
+      </p>
     </>
   );
 };

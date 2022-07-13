@@ -13,12 +13,22 @@ import { usePromiseFn } from "./usePromiseFn";
 type Props = {
   id: number;
   title: string;
+  description: string;
+  detail: string;
   image: string;
   width: number;
   height: number;
 };
 
-export const MintButton = ({ id, title, image, width, height }: Props) => {
+export const MintButton = ({
+  id,
+  title,
+  description,
+  detail,
+  image,
+  width,
+  height,
+}: Props) => {
   const { connector } = useAccount();
 
   const [mintResult, mint] = usePromiseFn(
@@ -63,46 +73,58 @@ export const MintButton = ({ id, title, image, width, height }: Props) => {
   );
 
   return (
-    <div className="relative w-full mt-4">
-      <h2 className="text-2xl font-bold pb-2">
+    <div className="w-full mt-4">
+      <h2 className="title text-2xl font-bold">
         {title} (#{id})
       </h2>
+      {description && (
+        <p className="description text-sm">
+          {description}{" "}
+          {detail && (
+            <a href={detail} target="_blank" rel="noreferrer">
+              More&hellip;
+            </a>
+          )}
+        </p>
+      )}
 
-      <Image src={image} width={width} height={height} alt={title} />
+      <div className="relative pt-2">
+        <Image src={image} width={width} height={height} alt={title} />
 
-      <Button
-        className="absolute top-12 right-4"
-        pending={mintResult.type === "pending"}
-        onClick={(event) => {
-          event.preventDefault();
-          const toastId = toast.loading("Starting…");
-          mint(1, (message) => {
-            toast.update(toastId, { render: message });
-          }).then(
-            () => {
-              // TODO: show etherscan link?
-              toast.update(toastId, {
-                isLoading: false,
-                type: "success",
-                render: `Minted!`,
-                autoClose: 5000,
-                closeButton: true,
-              });
-            },
-            (error) => {
-              toast.update(toastId, {
-                isLoading: false,
-                type: "error",
-                render: String(error.message),
-                autoClose: 5000,
-                closeButton: true,
-              });
-            }
-          );
-        }}
-      >
-        Mint
-      </Button>
+        <Button
+          className="absolute top-5 right-4"
+          pending={mintResult.type === "pending"}
+          onClick={(event) => {
+            event.preventDefault();
+            const toastId = toast.loading("Starting…");
+            mint(1, (message) => {
+              toast.update(toastId, { render: message });
+            }).then(
+              () => {
+                // TODO: show etherscan link?
+                toast.update(toastId, {
+                  isLoading: false,
+                  type: "success",
+                  render: `Minted!`,
+                  autoClose: 5000,
+                  closeButton: true,
+                });
+              },
+              (error) => {
+                toast.update(toastId, {
+                  isLoading: false,
+                  type: "error",
+                  render: String(error.message),
+                  autoClose: 5000,
+                  closeButton: true,
+                });
+              }
+            );
+          }}
+        >
+          Mint
+        </Button>
+      </div>
     </div>
   );
 };

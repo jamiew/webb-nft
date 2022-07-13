@@ -23,22 +23,23 @@ const HomePage: NextPage = () => {
         {/* <h1 className="text-4xl"></h1> */}
         <div
           id="about"
-          className="flex-col flex-shrink max-w-sm md:pt-20 pt-12 md:pl-0 pl-10"
+          className="flex-col flex-shrink md:pt-20 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-8 md:px-0"
         >
           <About />
         </div>
 
-        <div
-          id="container"
-          className="flex-grow flex flex-col gap-4 items-center justify-center p-8 pb-[10vh]"
-        >
+        <div className="flex-grow flex flex-col gap-4 items-center justify-center p-8 pb-[10vh] max-w-[50rem] mx-auto">
           {/* Use isMounted to temporarily workaround hydration issues where
           server-rendered markup doesn't match the client due to localStorage
           caching in wagmi. See https://github.com/holic/web3-scaffold/pull/26 */}
 
           <MintButton
             id={1}
-            title="SMACS 0723"
+            title={`Galaxy cluster SMACS 0723`}
+            detail={
+              "https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg"
+            }
+            description={`Light from galaxies 4.6 billion years old. "Webb's First Deep Field"`}
             image={"/thumbnails/1.jpg"}
             width={1600}
             height={1632}
@@ -46,6 +47,8 @@ const HomePage: NextPage = () => {
           <MintButton
             id={2}
             title="Carina Nebula"
+            description={`A young, star-forming region in the nebula called NGC 3324.`}
+            detail={"https://www.nasa.gov/webbfirstimages"}
             image={"/thumbnails/2.jpg"}
             width={1600}
             height={926}
@@ -53,6 +56,12 @@ const HomePage: NextPage = () => {
           <MintButton
             id={3}
             title="Southern Ring Nebula (NIRCam)"
+            description={
+              "NGC 3132, a star cloaked in dust, 2500 light years away."
+            }
+            detail={
+              "https://webbtelescope.org/contents/news-releases/2022/news-2022-033"
+            }
             image={"/thumbnails/3.jpg"}
             width={1600}
             height={1388}
@@ -60,6 +69,12 @@ const HomePage: NextPage = () => {
           <MintButton
             id={4}
             title="Southern Ring Nebula (MIRI)"
+            description={
+              "NGC 3132, a star cloaked in dust, 2500 light years away."
+            }
+            detail={
+              "https://webbtelescope.org/contents/news-releases/2022/news-2022-033"
+            }
             image={"/thumbnails/4.jpg"}
             width={1600}
             height={1490}
@@ -67,6 +82,10 @@ const HomePage: NextPage = () => {
           <MintButton
             id={5}
             title="Stephan's Quintet (NIRCam)"
+            description={"Five galaxies caught in a cosmic dance."}
+            detail={
+              "https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-sheds-light-on-galaxy-evolution-black-holes"
+            }
             image={"/thumbnails/5.jpg"}
             width={1600}
             height={1534}

@@ -16,6 +16,11 @@ body {
   /* Fixes a bug with rainbowkit dependency package that removes the scroll bar */
   margin-right: 0 !important;
   padding-right: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -24,32 +29,14 @@ a {
 }
 
 a:hover {
-  color: #f0f;
-}
-
-#container {
-  max-width: 800px;
-  @apply mx-auto;
+  color: #d946ef;
 }
 
 h1,
 h2 {
-  font-family: Inter, serif;
+  font-family: "Bitter", serif;
 }
 
 #about p {
   margin-bottom: 0.75rem;
-}
-
-button {
-  background-color: #000;
-}
-
-/* react-toastify theme overrides */
-.Toastify__toast-container {
-  font-size: 0.75rem;
-}
-
-.Toastify__toast-container--top-right {
-  top: 6rem !important;
 }

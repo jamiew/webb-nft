@@ -17,7 +17,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <EthereumProviders>
         <Component {...pageProps} />
       </EthereumProviders>
-      <ToastContainer position="bottom-right" draggable={false} />
+      <ToastContainer position="top-center" draggable={false} />
     </>
   );
 };

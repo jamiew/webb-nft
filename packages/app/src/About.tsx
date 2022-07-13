@@ -19,7 +19,7 @@ export const About = () => {
       </p>
       <p>
         <a
-          href="https://goerli.etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358"
+          href="https://etherscan.io/address/0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b"
           target="_blank"
           rel="noreferrer"
         >

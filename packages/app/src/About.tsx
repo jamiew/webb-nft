@@ -15,11 +15,19 @@ export const About = () => {
       <p>Free mint, 100% open-source, please enjoy</p>
 
       <p>
-        <a href="" target="_blank" rel="noreferrer">
+        <a
+          href="https://goerli.etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358"
+          target="_blank"
+          rel="noreferrer"
+        >
           Smart contract
         </a>{" "}
         &ndash;{" "}
-        <a href="" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/jamiew/webb-nft"
+          target="_blank"
+          rel="noreferrer"
+        >
           Full source code
         </a>{" "}
       </p>

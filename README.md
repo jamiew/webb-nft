@@ -12,6 +12,8 @@ This repository was forked from the amazing [web3-scaffold](https://github.com/h
 
 The smart contract is an ERC-1155 built using [Solmate](https://github.com/Rari-Capital/solmate) and [Foundry (forge)](https://github.com/foundry-rs/foundry)
 
+Assets are stored on the appropriately-named [Interplanetary File System (IPFS)](https://ipfs.io)
+
 ![Speed Project Approved: <4 hours](https://dl.dropboxusercontent.com/s%2Ftfazrdzp0rjijkg%2Fspeedproject_time_4h.png)
 
 ## Setup

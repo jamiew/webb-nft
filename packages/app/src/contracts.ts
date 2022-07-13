@@ -13,7 +13,11 @@ import { provider, targetChainId } from "./EthereumProviders";
 //   WebbNFT__factory.abi
 // ) as WebbNFT;
 
-const contractAddress = "0x860148ae4c23e28d4fccbdb6f99c71cd8d859f18";
+// currently only mainnet & goerli deployments
+const contractAddress =
+  targetChainId == 1
+    ? "0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b"
+    : "0x860148ae4c23e28d4fccbdb6f99c71cd8d859f18";
 
 export const webbNFTContract = WebbNFT__factory.connect(
   contractAddress,

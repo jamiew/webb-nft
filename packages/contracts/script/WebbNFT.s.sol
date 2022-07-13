@@ -10,7 +10,7 @@ to deploy, expecting $GOERLI_RPC_URL and $PRIVATE_KEY:
 
 to verify:
 
-  forge verify-contract --chain-id 5 --num-of-optimizations 2000 --constructor-args $(cast abi-encode "constructor(string,uint256)" "ipfs://QmPr4jwVHuwnwdZVRrDf38BRqyj24fVEPh4hdLXRG5qB3n/" 6) $ADDRESS packages/contracts/src/WebbNFT.sol:WebbNFT
+  forge verify-contract --chain-id 5 --num-of-optimizations 2000 --constructor-args $(cast abi-encode "constructor(string,uint256)" "ipfs://QmWdKUq3qHjstVSqCs9fMMoVB37N7pATprPXdWaCcfeQSs/" 6) $ADDRESS packages/contracts/src/WebbNFT.sol:WebbNFT
 
 (copy guid to $GUID)
 
@@ -36,7 +36,7 @@ contract DeployScript is Script {
         vm.startBroadcast();
 
         new WebbNFT(
-            "ipfs://QmPr4jwVHuwnwdZVRrDf38BRqyj24fVEPh4hdLXRG5qB3n/",
+            "ipfs://QmWdKUq3qHjstVSqCs9fMMoVB37N7pATprPXdWaCcfeQSs/",
             6
         );
 

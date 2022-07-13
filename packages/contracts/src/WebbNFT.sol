@@ -36,8 +36,6 @@ contract WebbNFT is Owned, ERC1155 {
         baseURI = _baseURI;
         maxID = _maxID;
         enabled = true;
-
-        // _mint(msg.sender, 1, 1, "");
     }
 
     function setBaseURI(string memory _baseURI) public onlyOwner {

@@ -1,0 +1,6 @@
+public/thumbnails/1.jpg filter=lfs diff=lfs merge=lfs -text
+public/thumbnails/2.jpg filter=lfs diff=lfs merge=lfs -text
+public/thumbnails/3.jpg filter=lfs diff=lfs merge=lfs -text
+public/thumbnails/4.jpg filter=lfs diff=lfs merge=lfs -text
+public/thumbnails/5.jpg filter=lfs diff=lfs merge=lfs -text
+public/thumbnails/6.jpg filter=lfs diff=lfs merge=lfs -text

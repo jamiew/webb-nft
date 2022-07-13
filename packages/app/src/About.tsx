@@ -13,7 +13,6 @@ export const About = () => {
         </a>
       </p>
       <p>Free mint, 100% open-source, please enjoy</p>
-
       <p>
         <a
           href="https://goerli.etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358"
@@ -22,7 +21,7 @@ export const About = () => {
         >
           Smart contract
         </a>{" "}
-        &ndash;{" "}
+        &bull;{" "}
         <a
           href="https://github.com/jamiew/webb-nft"
           target="_blank"
@@ -37,14 +36,17 @@ export const About = () => {
       </p>
 
       <p>
-        Images &copy; 2022 [NASA/STScI](https://webbtelescope.org) and [available in the public domain](https://webbtelescope.org/copyright) <3
-
+        Images &copy; 2022{" "}
+        <a href="https://webbtelescope.org" target="_blank" rel="noreferrer">
+          NASA/STScI
+        </a>{" "}
+        and{" "}
         <a
           href="https://webbtelescope.org/copyright"
           target="_blank"
           rel="noreferrer"
         >
-          public domain
+          available in the public domain.
         </a>
       </p>
     </>

@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
   const isMounted = useIsMounted();
 
   return (
-    <div className="min-h-screen flex flex-col md:p-6 p-2">
+    <div className="min-h-screen flex flex-col md:p-6 p-2 max-w-[85rem]">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Bitter&display=optional"

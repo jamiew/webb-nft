@@ -9,7 +9,7 @@ export const About = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Read more.
+          Learn more.
         </a>
       </p>
       <p>Free mint, 100% open-source, please enjoy</p>

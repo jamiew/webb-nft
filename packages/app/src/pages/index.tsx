@@ -93,6 +93,10 @@ const HomePage: NextPage = () => {
           <MintButton
             id={6}
             title="Stephan's Quintet (MIRI)"
+            description={"Five galaxies caught in a cosmic dance."}
+            detail={
+              "https://www.nasa.gov/image-feature/goddard/2022/nasa-s-webb-sheds-light-on-galaxy-evolution-black-holes"
+            }
             image={"/thumbnails/6.jpg"}
             width={1600}
             height={1340}

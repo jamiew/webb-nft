@@ -13,9 +13,13 @@ contract WebbNFTTest is Test {
         vm.addr(uint256(keccak256(abi.encodePacked("minter"))));
 
     function setUp() public {
+        console2.log("hi");
         nft = new WebbNFT("ipfs://lol", 5);
+
+        console2.log("setting owner...");
         nft.setOwner(owner);
         assertEq(nft.owner(), owner);
+
         vm.deal(owner, 10 ether);
         vm.deal(minter, 10 ether);
     }
@@ -30,7 +34,7 @@ contract WebbNFTTest is Test {
         vm.expectRevert("UNAUTHORIZED");
         vm.prank(minter);
         nft.setMaxID(42);
-        assertEq(nft.maxID(), 666); // old one
+        assertEq(nft.maxID(), 666); // old value
     }
 
     function testSetBaseURI() public {
@@ -43,7 +47,20 @@ contract WebbNFTTest is Test {
         vm.expectRevert("UNAUTHORIZED");
         vm.prank(minter);
         nft.setBaseURI("ipfs://else/");
-        assertEq(nft.baseURI(), "ipfs://ok/"); // old one
+        assertEq(nft.baseURI(), "ipfs://ok/"); // old value
+    }
+
+    function testSetEnabled() public {
+        assertEq(nft.enabled(), true); // default, from above
+
+        vm.prank(owner);
+        nft.setEnabled(false);
+        assertEq(nft.enabled(), false);
+
+        vm.expectRevert("UNAUTHORIZED");
+        vm.prank(minter);
+        nft.setEnabled(false);
+        assertEq(nft.enabled(), false); // old value
     }
 
     function testMint() public {
@@ -62,10 +79,19 @@ contract WebbNFTTest is Test {
         nft.mint(6);
     }
 
+    function testMintFailsIfDisabled() public {
+        vm.prank(owner);
+        nft.setEnabled(false);
+
+        vm.prank(minter);
+        vm.expectRevert(WebbNFT.MintingNotEnabled.selector);
+        nft.mint(1);
+    }
+
     function testUri() public {
         vm.prank(owner);
         nft.setBaseURI("ipfs://ok/");
         console2.log("nft.uri(1)", nft.uri(1));
-        assertEq(nft.uri(1), "ipfs://ok/1.jpg");
+        assertEq(nft.uri(1), "ipfs://ok/1");
     }
 }

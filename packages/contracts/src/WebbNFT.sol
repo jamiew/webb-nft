@@ -4,14 +4,19 @@ pragma solidity ^0.8.15;
 import {Owned} from "solmate/auth/Owned.sol";
 import {ERC1155} from "solmate/tokens/ERC1155.sol";
 
+// @title free-mint, commemorative NFTs to celebrate the first images from the James Webb Space Telescope (JWST)
+// @author jamiedubs <https://jamiedubs.com>
 contract WebbNFT is Owned, ERC1155 {
     string public baseURI;
     uint256 public maxID;
+    bool public enabled;
 
     error TokenDoesNotExist();
+    error MintingNotEnabled();
 
     event BaseURIUpdated(string newBaseURI);
     event MaxIDUpdated(uint256 newMaxID);
+    event EnabledUpdated(bool newEnabled);
 
     modifier tokenExists(uint256 id) {
         if (id > maxID) {
@@ -20,9 +25,19 @@ contract WebbNFT is Owned, ERC1155 {
         _;
     }
 
+    modifier mintingEnabled() {
+        if (!enabled) {
+            revert MintingNotEnabled();
+        }
+        _;
+    }
+
     constructor(string memory _baseURI, uint256 _maxID) Owned(msg.sender) {
         baseURI = _baseURI;
         maxID = _maxID;
+        enabled = true;
+
+        // _mint(msg.sender, 1, 1, "");
     }
 
     function setBaseURI(string memory _baseURI) public onlyOwner {
@@ -35,7 +50,12 @@ contract WebbNFT is Owned, ERC1155 {
         emit MaxIDUpdated(_maxID);
     }
 
-    function mint(uint256 id) public tokenExists(id) {
+    function setEnabled(bool _enabled) public onlyOwner {
+        enabled = _enabled;
+        emit EnabledUpdated(_enabled);
+    }
+
+    function mint(uint256 id) public tokenExists(id) mintingEnabled {
         _mint(msg.sender, id, 1, "");
     }
 
@@ -46,11 +66,12 @@ contract WebbNFT is Owned, ERC1155 {
         tokenExists(id)
         returns (string memory)
     {
+        // use vanilla URLs instead of ERC-1155 {id} urls
         return string.concat(baseURI, Strings.toString(id));
     }
 }
 
-// ripped from OZ Strings
+// ripped from OZ Strings; we don't need the other two functions in that library
 library Strings {
     function toString(uint256 value) internal pure returns (string memory) {
         // Inspired by OraclizeAPI's implementation - MIT licence

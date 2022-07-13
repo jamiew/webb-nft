@@ -1,6 +1,6 @@
-![A collage of images from this collection](https://dl.dropboxusercontent.com/s/ylluedjt6ykpoa8/webb-mint-collage%2520%25281%2529.png)
-
 # go_webb_go.sol
+
+![A collage of images from this collection](https://dl.dropboxusercontent.com/s/ylluedjt6ykpoa8/webb-mint-collage%2520%25281%2529.png)
 
 Free commemorative NFTs of the first images from the James Webb Space Telescope (JWST)
 

@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { PendingIcon } from "./PendingIcon";
 
 const buttonClasses =
-  "self-center transition text-white bg-sky-600 hover:bg-cyan-600 active:bg-cyan-700 disabled:bg-slate-400 px-6 py-3 rounded-lg text-xl flex";
+  "self-center transition text-black bg-white hover:bg-pink-500 active:bg-pink-700 disabled:bg-slate-400 px-6 py-3 rounded-lg text-xl flex";
 
 type Props = {
   children: React.ReactNode;

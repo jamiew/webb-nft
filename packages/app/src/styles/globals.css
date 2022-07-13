@@ -10,32 +10,46 @@
   --toastify-font-family: inherit;
 }
 
-@font-face {
-  font-family: "AntiqueOliveNord";
-  src: url("/fonts/AntiqueOliveNord.woff2") format("woff2"),
-    url("/fonts/AntiqueOliveNord.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   /* Fixes a bug with rainbowkit dependency package that removes the scroll bar */
   margin-right: 0 !important;
   padding-right: 0 !important;
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: underline;
 }
 
 a:hover {
+  color: #f0f;
 }
 
 #container {
   max-width: 800px;
   @apply mx-auto;
+}
+
+h1,
+h2 {
+  font-family: Inter, serif;
+}
+
+#about p {
+  margin-bottom: 0.75rem;
+}
+
+button {
+  background-color: #000;
+}
+
+/* react-toastify theme overrides */
+.Toastify__toast-container {
+  font-size: 0.75rem;
+}
+
+.Toastify__toast-container--top-right {
+  top: 6rem !important;
 }

@@ -94,4 +94,12 @@ contract WebbNFTTest is Test {
         console2.log("nft.uri(1)", nft.uri(1));
         assertEq(nft.uri(1), "ipfs://ok/1");
     }
+
+    function testName() public {
+        assertEq(nft.name(), "James Webb Space Telescope NFTs");
+    }
+
+    function testSymbol() public {
+        assertEq(nft.symbol(), "WEBB3");
+    }
 }

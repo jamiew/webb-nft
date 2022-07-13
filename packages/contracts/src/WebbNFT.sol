@@ -11,6 +11,9 @@ contract WebbNFT is Owned, ERC1155 {
     uint256 public maxID;
     bool public enabled;
 
+    string public name = "James Webb Space Telescope NFTs";
+    string public symbol = "WEBB3";
+
     error TokenDoesNotExist();
     error MintingNotEnabled();
 

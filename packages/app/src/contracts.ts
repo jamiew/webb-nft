@@ -13,7 +13,7 @@ import { provider, targetChainId } from "./EthereumProviders";
 //   WebbNFT__factory.abi
 // ) as WebbNFT;
 
-const contractAddress = "0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358";
+const contractAddress = "0x860148ae4c23e28d4fccbdb6f99c71cd8d859f18";
 
 export const webbNFTContract = WebbNFT__factory.connect(
   contractAddress,

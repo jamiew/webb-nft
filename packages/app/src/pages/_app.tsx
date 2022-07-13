@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>Webb NFT</title>
+        <title>Webb First Image NFTs • Ethereum/ERC-1155</title>
       </Head>
       <EthereumProviders>
         <Component {...pageProps} />

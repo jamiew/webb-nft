@@ -18,6 +18,10 @@ to confirm verification status:
 
   forge verify-check --chain-id 5 $GUID
 
+to check the output of `uri()` for deployed contract:
+
+  cast call --rpc-url $GOERLI_RPC_URL $ADDRESS "uri(uint256)(string)" 1
+
 TODO would using a --constructor-args-file make this simpler?
 
 */

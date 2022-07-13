@@ -39,42 +39,42 @@ const HomePage: NextPage = () => {
           <MintButton
             id={1}
             title="SMACS 0723"
-            image={"/thumbnails2/1.jpg"}
+            image={"/thumbnails/1.jpg"}
             width={1600}
             height={1632}
           />
           <MintButton
             id={2}
             title="Carina Nebula"
-            image={"/thumbnails2/2.jpg"}
+            image={"/thumbnails/2.jpg"}
             width={1600}
             height={926}
           />
           <MintButton
             id={3}
             title="Southern Ring Nebula (NIRCam)"
-            image={"/thumbnails2/3.jpg"}
+            image={"/thumbnails/3.jpg"}
             width={1600}
             height={1388}
           />
           <MintButton
             id={4}
             title="Southern Ring Nebula (MIRI)"
-            image={"/thumbnails2/4.jpg"}
+            image={"/thumbnails/4.jpg"}
             width={1600}
             height={1490}
           />
           <MintButton
             id={5}
             title="Stephan's Quintet (NIRCam)"
-            image={"/thumbnails2/5.jpg"}
+            image={"/thumbnails/5.jpg"}
             width={1600}
             height={1534}
           />
           <MintButton
             id={6}
             title="Stephan's Quintet (MIRI)"
-            image={"/thumbnails2/6.jpg"}
+            image={"/thumbnails/6.jpg"}
             width={1600}
             height={1340}
           />

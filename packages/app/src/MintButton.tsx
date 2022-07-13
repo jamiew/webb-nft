@@ -41,17 +41,18 @@ export const MintButton = ({ id, title, image, width, height }: Props) => {
         );
         console.log("mint tx", tx);
 
-        onProgress("Finalizing transaction…");
-        const receipt = await promiseNotify(tx?.wait())
-          .after(1000 * 15, () =>
-            onProgress(
-              "It can sometimes take a while to finalize a transaction…"
-            )
-          )
-          .after(1000 * 30, () => onProgress("Still working on it…"));
-        console.log("mint receipt", receipt);
+        // onProgress("Finalizing transaction…");
+        // const receipt = await promiseNotify(tx.wait())
+        //   .after(1000 * 15, () =>
+        //     onProgress(
+        //       "It can sometimes take a while to finalize a transaction…"
+        //     )
+        //   )
+        //   .after(1000 * 30, () => onProgress("Still working on it…"));
+        // console.log("mint receipt", receipt);
 
-        return { receipt };
+        // return { receipt };
+        return {};
       } catch (error) {
         console.error("Transaction error:", error);
         const contractError = extractContractError(error);

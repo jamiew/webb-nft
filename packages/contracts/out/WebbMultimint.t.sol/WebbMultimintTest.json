@@ -772,22 +772,22 @@
   },
   "ast": {
     "absolutePath": "packages/contracts/test/WebbMultimint.t.sol",
-    "id": 22696,
+    "id": 22688,
     "exportedSymbols": {
       "DSTest": [
-        21380
+        21372
       ],
       "ERC1155": [
-        22075
+        22067
       ],
       "ERC1155TokenReceiver": [
-        22119
+        22111
       ],
       "IWebbNFT": [
-        22267
+        22259
       ],
       "Owned": [
-        21440
+        21432
       ],
       "Script": [
         235
@@ -796,34 +796,34 @@
         1652
       ],
       "Strings": [
-        22523
+        22515
       ],
       "Test": [
         1554
       ],
       "Vm": [
-        3465
+        3457
       ],
       "WebbMultimint": [
-        22223
+        22215
       ],
       "WebbMultimintTest": [
-        22695
+        22687
       ],
       "WebbNFT": [
-        22444
+        22436
       ],
       "console": [
-        11529
+        11521
       ],
       "console2": [
-        19593
+        19585
       ],
       "stdError": [
         1624
       ],
       "stdMath": [
-        2901
+        2893
       ],
       "stdStorage": [
         2754
@@ -833,7 +833,7 @@
     "src": "32:1205:10",
     "nodes": [
       {
-        "id": 22525,
+        "id": 22517,
         "nodeType": "PragmaDirective",
         "src": "32:32:10",
         "literals": [
@@ -847,123 +847,123 @@
         ]
       },
       {
-        "id": 22526,
+        "id": 22518,
         "nodeType": "ImportDirective",
         "src": "66:28:10",
         "absolutePath": "packages/contracts/lib/forge-std/src/Test.sol",
         "file": "forge-std/Test.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 22696,
-        "sourceUnit": 2902,
+        "scope": 22688,
+        "sourceUnit": 2894,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 22527,
+        "id": 22519,
         "nodeType": "ImportDirective",
         "src": "95:28:10",
         "absolutePath": "packages/contracts/src/WebbNFT.sol",
         "file": "../src/WebbNFT.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 22696,
-        "sourceUnit": 22524,
+        "scope": 22688,
+        "sourceUnit": 22516,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 22528,
+        "id": 22520,
         "nodeType": "ImportDirective",
         "src": "124:34:10",
         "absolutePath": "packages/contracts/src/WebbMultimint.sol",
         "file": "../src/WebbMultimint.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 22696,
-        "sourceUnit": 22268,
+        "scope": 22688,
+        "sourceUnit": 22260,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 22695,
+        "id": 22687,
         "nodeType": "ContractDefinition",
         "src": "160:1076:10",
         "nodes": [
           {
-            "id": 22533,
+            "id": 22525,
             "nodeType": "VariableDeclaration",
             "src": "201:19:10",
             "constant": false,
             "mutability": "mutable",
             "name": "nft",
             "nameLocation": "217:3:10",
-            "scope": 22695,
+            "scope": 22687,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_WebbNFT_$22444",
+              "typeIdentifier": "t_contract$_WebbNFT_$22436",
               "typeString": "contract WebbNFT"
             },
             "typeName": {
-              "id": 22532,
+              "id": 22524,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 22531,
+                "id": 22523,
                 "name": "WebbNFT",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 22444,
+                "referencedDeclaration": 22436,
                 "src": "201:7:10"
               },
-              "referencedDeclaration": 22444,
+              "referencedDeclaration": 22436,
               "src": "201:7:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                "typeIdentifier": "t_contract$_WebbNFT_$22436",
                 "typeString": "contract WebbNFT"
               }
             },
             "visibility": "private"
           },
           {
-            "id": 22536,
+            "id": 22528,
             "nodeType": "VariableDeclaration",
             "src": "226:31:10",
             "constant": false,
             "mutability": "mutable",
             "name": "multimint",
             "nameLocation": "248:9:10",
-            "scope": 22695,
+            "scope": 22687,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+              "typeIdentifier": "t_contract$_WebbMultimint_$22215",
               "typeString": "contract WebbMultimint"
             },
             "typeName": {
-              "id": 22535,
+              "id": 22527,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 22534,
+                "id": 22526,
                 "name": "WebbMultimint",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 22223,
+                "referencedDeclaration": 22215,
                 "src": "226:13:10"
               },
-              "referencedDeclaration": 22223,
+              "referencedDeclaration": 22215,
               "src": "226:13:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                 "typeString": "contract WebbMultimint"
               }
             },
             "visibility": "private"
           },
           {
-            "id": 22550,
+            "id": 22542,
             "nodeType": "VariableDeclaration",
             "src": "264:86:10",
             "constant": false,
             "mutability": "mutable",
             "name": "owner",
             "nameLocation": "280:5:10",
-            "scope": 22695,
+            "scope": 22687,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -971,7 +971,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 22537,
+              "id": 22529,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "264:7:10",
@@ -991,7 +991,7 @@
                           "arguments": [
                             {
                               "hexValue": "6f776e6572",
-                              "id": 22545,
+                              "id": 22537,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1014,7 +1014,7 @@
                               }
                             ],
                             "expression": {
-                              "id": 22543,
+                              "id": 22535,
                               "name": "abi",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -1025,7 +1025,7 @@
                                 "typeString": "abi"
                               }
                             },
-                            "id": 22544,
+                            "id": 22536,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1038,7 +1038,7 @@
                               "typeString": "function () pure returns (bytes memory)"
                             }
                           },
-                          "id": 22546,
+                          "id": 22538,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1061,7 +1061,7 @@
                             "typeString": "bytes memory"
                           }
                         ],
-                        "id": 22542,
+                        "id": 22534,
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1072,7 +1072,7 @@
                           "typeString": "function (bytes memory) pure returns (bytes32)"
                         }
                       },
-                      "id": 22547,
+                      "id": 22539,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1095,7 +1095,7 @@
                         "typeString": "bytes32"
                       }
                     ],
-                    "id": 22541,
+                    "id": 22533,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1107,14 +1107,14 @@
                       "typeString": "type(uint256)"
                     },
                     "typeName": {
-                      "id": 22540,
+                      "id": 22532,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "304:7:10",
                       "typeDescriptions": {}
                     }
                   },
-                  "id": 22548,
+                  "id": 22540,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1138,32 +1138,32 @@
                   }
                 ],
                 "expression": {
-                  "id": 22538,
+                  "id": 22530,
                   "name": "vm",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 30,
                   "src": "296:2:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Vm_$3465",
+                    "typeIdentifier": "t_contract$_Vm_$3457",
                     "typeString": "contract Vm"
                   }
                 },
-                "id": 22539,
+                "id": 22531,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": false,
                 "lValueRequested": false,
                 "memberName": "addr",
                 "nodeType": "MemberAccess",
-                "referencedDeclaration": 2968,
+                "referencedDeclaration": 2960,
                 "src": "296:7:10",
                 "typeDescriptions": {
                   "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_address_$",
                   "typeString": "function (uint256) external returns (address)"
                 }
               },
-              "id": 22549,
+              "id": 22541,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
@@ -1181,14 +1181,14 @@
             "visibility": "private"
           },
           {
-            "id": 22564,
+            "id": 22556,
             "nodeType": "VariableDeclaration",
             "src": "356:88:10",
             "constant": false,
             "mutability": "mutable",
             "name": "minter",
             "nameLocation": "372:6:10",
-            "scope": 22695,
+            "scope": 22687,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1196,7 +1196,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 22551,
+              "id": 22543,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "356:7:10",
@@ -1216,7 +1216,7 @@
                           "arguments": [
                             {
                               "hexValue": "6d696e746572",
-                              "id": 22559,
+                              "id": 22551,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1239,7 +1239,7 @@
                               }
                             ],
                             "expression": {
-                              "id": 22557,
+                              "id": 22549,
                               "name": "abi",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
@@ -1250,7 +1250,7 @@
                                 "typeString": "abi"
                               }
                             },
-                            "id": 22558,
+                            "id": 22550,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1263,7 +1263,7 @@
                               "typeString": "function () pure returns (bytes memory)"
                             }
                           },
-                          "id": 22560,
+                          "id": 22552,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1286,7 +1286,7 @@
                             "typeString": "bytes memory"
                           }
                         ],
-                        "id": 22556,
+                        "id": 22548,
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -1297,7 +1297,7 @@
                           "typeString": "function (bytes memory) pure returns (bytes32)"
                         }
                       },
-                      "id": 22561,
+                      "id": 22553,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1320,7 +1320,7 @@
                         "typeString": "bytes32"
                       }
                     ],
-                    "id": 22555,
+                    "id": 22547,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1332,14 +1332,14 @@
                       "typeString": "type(uint256)"
                     },
                     "typeName": {
-                      "id": 22554,
+                      "id": 22546,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
                       "src": "397:7:10",
                       "typeDescriptions": {}
                     }
                   },
-                  "id": 22562,
+                  "id": 22554,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1363,32 +1363,32 @@
                   }
                 ],
                 "expression": {
-                  "id": 22552,
+                  "id": 22544,
                   "name": "vm",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 30,
                   "src": "389:2:10",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_Vm_$3465",
+                    "typeIdentifier": "t_contract$_Vm_$3457",
                     "typeString": "contract Vm"
                   }
                 },
-                "id": 22553,
+                "id": 22545,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": false,
                 "lValueRequested": false,
                 "memberName": "addr",
                 "nodeType": "MemberAccess",
-                "referencedDeclaration": 2968,
+                "referencedDeclaration": 2960,
                 "src": "389:7:10",
                 "typeDescriptions": {
                   "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_address_$",
                   "typeString": "function (uint256) external returns (address)"
                 }
               },
-              "id": 22563,
+              "id": 22555,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
@@ -1406,30 +1406,30 @@
             "visibility": "private"
           },
           {
-            "id": 22608,
+            "id": 22600,
             "nodeType": "FunctionDefinition",
             "src": "451:226:10",
             "body": {
-              "id": 22607,
+              "id": 22599,
               "nodeType": "Block",
               "src": "475:202:10",
               "statements": [
                 {
                   "expression": {
-                    "id": 22574,
+                    "id": 22566,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 22567,
+                      "id": 22559,
                       "name": "nft",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22533,
+                      "referencedDeclaration": 22525,
                       "src": "485:3:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                        "typeIdentifier": "t_contract$_WebbNFT_$22436",
                         "typeString": "contract WebbNFT"
                       }
                     },
@@ -1439,7 +1439,7 @@
                       "arguments": [
                         {
                           "hexValue": "697066733a2f2f6879647261",
-                          "id": 22571,
+                          "id": 22563,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1455,7 +1455,7 @@
                         },
                         {
                           "hexValue": "33",
-                          "id": 22572,
+                          "id": 22564,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1481,7 +1481,7 @@
                             "typeString": "int_const 3"
                           }
                         ],
-                        "id": 22570,
+                        "id": 22562,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1489,28 +1489,28 @@
                         "nodeType": "NewExpression",
                         "src": "491:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$_t_contract$_WebbNFT_$22444_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$_t_contract$_WebbNFT_$22436_$",
                           "typeString": "function (string memory,uint256) returns (contract WebbNFT)"
                         },
                         "typeName": {
-                          "id": 22569,
+                          "id": 22561,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 22568,
+                            "id": 22560,
                             "name": "WebbNFT",
                             "nodeType": "IdentifierPath",
-                            "referencedDeclaration": 22444,
+                            "referencedDeclaration": 22436,
                             "src": "495:7:10"
                           },
-                          "referencedDeclaration": 22444,
+                          "referencedDeclaration": 22436,
                           "src": "495:7:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                            "typeIdentifier": "t_contract$_WebbNFT_$22436",
                             "typeString": "contract WebbNFT"
                           }
                         }
                       },
-                      "id": 22573,
+                      "id": 22565,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1521,17 +1521,17 @@
                       "src": "491:30:10",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                        "typeIdentifier": "t_contract$_WebbNFT_$22436",
                         "typeString": "contract WebbNFT"
                       }
                     },
                     "src": "485:36:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                      "typeIdentifier": "t_contract$_WebbNFT_$22436",
                       "typeString": "contract WebbNFT"
                     }
                   },
-                  "id": 22575,
+                  "id": 22567,
                   "nodeType": "ExpressionStatement",
                   "src": "485:36:10"
                 },
@@ -1540,7 +1540,7 @@
                     "arguments": [
                       {
                         "hexValue": "6e6674",
-                        "id": 22579,
+                        "id": 22571,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1557,14 +1557,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 22582,
+                            "id": 22574,
                             "name": "nft",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 22533,
+                            "referencedDeclaration": 22525,
                             "src": "558:3:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                              "typeIdentifier": "t_contract$_WebbNFT_$22436",
                               "typeString": "contract WebbNFT"
                             }
                           }
@@ -1572,11 +1572,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                              "typeIdentifier": "t_contract$_WebbNFT_$22436",
                               "typeString": "contract WebbNFT"
                             }
                           ],
-                          "id": 22581,
+                          "id": 22573,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1588,14 +1588,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 22580,
+                            "id": 22572,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "550:7:10",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 22583,
+                        "id": 22575,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1623,32 +1623,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 22576,
+                        "id": 22568,
                         "name": "console",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11529,
+                        "referencedDeclaration": 11521,
                         "src": "531:7:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_console_$11529_$",
+                          "typeIdentifier": "t_type$_t_contract$_console_$11521_$",
                           "typeString": "type(library console)"
                         }
                       },
-                      "id": 22578,
+                      "id": 22570,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "log",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4224,
+                      "referencedDeclaration": 4216,
                       "src": "531:11:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_address_$returns$__$",
                         "typeString": "function (string memory,address) view"
                       }
                     },
-                    "id": 22584,
+                    "id": 22576,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1663,26 +1663,26 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 22585,
+                  "id": 22577,
                   "nodeType": "ExpressionStatement",
                   "src": "531:32:10"
                 },
                 {
                   "expression": {
-                    "id": 22595,
+                    "id": 22587,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 22586,
+                      "id": 22578,
                       "name": "multimint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22536,
+                      "referencedDeclaration": 22528,
                       "src": "573:9:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                        "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                         "typeString": "contract WebbMultimint"
                       }
                     },
@@ -1693,14 +1693,14 @@
                         {
                           "arguments": [
                             {
-                              "id": 22592,
+                              "id": 22584,
                               "name": "nft",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22533,
+                              "referencedDeclaration": 22525,
                               "src": "611:3:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                                "typeIdentifier": "t_contract$_WebbNFT_$22436",
                                 "typeString": "contract WebbNFT"
                               }
                             }
@@ -1708,11 +1708,11 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                                "typeIdentifier": "t_contract$_WebbNFT_$22436",
                                 "typeString": "contract WebbNFT"
                               }
                             ],
-                            "id": 22591,
+                            "id": 22583,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1724,14 +1724,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 22590,
+                              "id": 22582,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "603:7:10",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 22593,
+                          "id": 22585,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1754,7 +1754,7 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 22589,
+                        "id": 22581,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1762,28 +1762,28 @@
                         "nodeType": "NewExpression",
                         "src": "585:17:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_WebbMultimint_$22223_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_WebbMultimint_$22215_$",
                           "typeString": "function (address) returns (contract WebbMultimint)"
                         },
                         "typeName": {
-                          "id": 22588,
+                          "id": 22580,
                           "nodeType": "UserDefinedTypeName",
                           "pathNode": {
-                            "id": 22587,
+                            "id": 22579,
                             "name": "WebbMultimint",
                             "nodeType": "IdentifierPath",
-                            "referencedDeclaration": 22223,
+                            "referencedDeclaration": 22215,
                             "src": "589:13:10"
                           },
-                          "referencedDeclaration": 22223,
+                          "referencedDeclaration": 22215,
                           "src": "589:13:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                            "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                             "typeString": "contract WebbMultimint"
                           }
                         }
                       },
-                      "id": 22594,
+                      "id": 22586,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1794,17 +1794,17 @@
                       "src": "585:31:10",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                        "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                         "typeString": "contract WebbMultimint"
                       }
                     },
                     "src": "573:43:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                      "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                       "typeString": "contract WebbMultimint"
                     }
                   },
-                  "id": 22596,
+                  "id": 22588,
                   "nodeType": "ExpressionStatement",
                   "src": "573:43:10"
                 },
@@ -1813,7 +1813,7 @@
                     "arguments": [
                       {
                         "hexValue": "6d756c74696d696e74",
-                        "id": 22600,
+                        "id": 22592,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1830,14 +1830,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 22603,
+                            "id": 22595,
                             "name": "multimint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 22536,
+                            "referencedDeclaration": 22528,
                             "src": "659:9:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                              "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                               "typeString": "contract WebbMultimint"
                             }
                           }
@@ -1845,11 +1845,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                              "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                               "typeString": "contract WebbMultimint"
                             }
                           ],
-                          "id": 22602,
+                          "id": 22594,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1861,14 +1861,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 22601,
+                            "id": 22593,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "651:7:10",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 22604,
+                        "id": 22596,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1896,32 +1896,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 22597,
+                        "id": 22589,
                         "name": "console",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11529,
+                        "referencedDeclaration": 11521,
                         "src": "626:7:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_console_$11529_$",
+                          "typeIdentifier": "t_type$_t_contract$_console_$11521_$",
                           "typeString": "type(library console)"
                         }
                       },
-                      "id": 22599,
+                      "id": 22591,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "log",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4224,
+                      "referencedDeclaration": 4216,
                       "src": "626:11:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_address_$returns$__$",
                         "typeString": "function (string memory,address) view"
                       }
                     },
-                    "id": 22605,
+                    "id": 22597,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1936,7 +1936,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 22606,
+                  "id": 22598,
                   "nodeType": "ExpressionStatement",
                   "src": "626:44:10"
                 }
@@ -1949,44 +1949,44 @@
             "name": "setUp",
             "nameLocation": "460:5:10",
             "parameters": {
-              "id": 22565,
+              "id": 22557,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "465:2:10"
             },
             "returnParameters": {
-              "id": 22566,
+              "id": 22558,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "475:0:10"
             },
-            "scope": 22695,
+            "scope": 22687,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 22694,
+            "id": 22686,
             "nodeType": "FunctionDefinition",
             "src": "683:551:10",
             "body": {
-              "id": 22693,
+              "id": 22685,
               "nodeType": "Block",
               "src": "713:521:10",
               "statements": [
                 {
                   "assignments": [
-                    22612
+                    22604
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 22612,
+                      "id": 22604,
                       "mutability": "mutable",
                       "name": "maxID",
                       "nameLocation": "731:5:10",
                       "nodeType": "VariableDeclaration",
-                      "scope": 22693,
+                      "scope": 22685,
                       "src": "723:13:10",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1995,7 +1995,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 22611,
+                        "id": 22603,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "723:7:10",
@@ -2007,38 +2007,38 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 22616,
+                  "id": 22608,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
                       "expression": {
-                        "id": 22613,
+                        "id": 22605,
                         "name": "nft",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22533,
+                        "referencedDeclaration": 22525,
                         "src": "739:3:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                          "typeIdentifier": "t_contract$_WebbNFT_$22436",
                           "typeString": "contract WebbNFT"
                         }
                       },
-                      "id": 22614,
+                      "id": 22606,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "maxID",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 22281,
+                      "referencedDeclaration": 22273,
                       "src": "739:9:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
                         "typeString": "function () view external returns (uint256)"
                       }
                     },
-                    "id": 22615,
+                    "id": 22607,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2058,7 +2058,7 @@
                 },
                 {
                   "body": {
-                    "id": 22643,
+                    "id": 22635,
                     "nodeType": "Block",
                     "src": "797:110:10",
                     "statements": [
@@ -2067,7 +2067,7 @@
                           "arguments": [
                             {
                               "hexValue": "73686f756c6420686176652030206f66",
-                              "id": 22630,
+                              "id": 22622,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2082,11 +2082,11 @@
                               "value": "should have 0 of"
                             },
                             {
-                              "id": 22631,
+                              "id": 22623,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22618,
+                              "referencedDeclaration": 22610,
                               "src": "843:1:10",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2106,32 +2106,32 @@
                               }
                             ],
                             "expression": {
-                              "id": 22627,
+                              "id": 22619,
                               "name": "console",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11529,
+                              "referencedDeclaration": 11521,
                               "src": "811:7:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_console_$11529_$",
+                                "typeIdentifier": "t_type$_t_contract$_console_$11521_$",
                                 "typeString": "type(library console)"
                               }
                             },
-                            "id": 22629,
+                            "id": 22621,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "log",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4173,
+                            "referencedDeclaration": 4165,
                             "src": "811:11:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                               "typeString": "function (string memory,uint256) view"
                             }
                           },
-                          "id": 22632,
+                          "id": 22624,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2146,7 +2146,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 22633,
+                        "id": 22625,
                         "nodeType": "ExpressionStatement",
                         "src": "811:34:10"
                       },
@@ -2156,11 +2156,11 @@
                             {
                               "arguments": [
                                 {
-                                  "id": 22637,
+                                  "id": 22629,
                                   "name": "minter",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22564,
+                                  "referencedDeclaration": 22556,
                                   "src": "882:6:10",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
@@ -2168,11 +2168,11 @@
                                   }
                                 },
                                 {
-                                  "id": 22638,
+                                  "id": 22630,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22618,
+                                  "referencedDeclaration": 22610,
                                   "src": "890:1:10",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -2192,32 +2192,32 @@
                                   }
                                 ],
                                 "expression": {
-                                  "id": 22635,
+                                  "id": 22627,
                                   "name": "nft",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22533,
+                                  "referencedDeclaration": 22525,
                                   "src": "868:3:10",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                                    "typeIdentifier": "t_contract$_WebbNFT_$22436",
                                     "typeString": "contract WebbNFT"
                                   }
                                 },
-                                "id": 22636,
+                                "id": 22628,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "balanceOf",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 21489,
+                                "referencedDeclaration": 21481,
                                 "src": "868:13:10",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$returns$_t_uint256_$",
                                   "typeString": "function (address,uint256) view external returns (uint256)"
                                 }
                               },
-                              "id": 22639,
+                              "id": 22631,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -2234,7 +2234,7 @@
                             },
                             {
                               "hexValue": "30",
-                              "id": 22640,
+                              "id": 22632,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2260,7 +2260,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 22634,
+                            "id": 22626,
                             "name": "assertEq",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
@@ -2274,25 +2274,25 @@
                               1095,
                               1132,
                               1169,
-                              19914,
-                              19939,
-                              19969,
-                              19994,
-                              20053,
-                              20078,
-                              20108,
-                              20133,
-                              21233,
-                              21268
+                              19906,
+                              19931,
+                              19961,
+                              19986,
+                              20045,
+                              20070,
+                              20100,
+                              20125,
+                              21225,
+                              21260
                             ],
-                            "referencedDeclaration": 20108,
+                            "referencedDeclaration": 20100,
                             "src": "859:8:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                               "typeString": "function (uint256,uint256)"
                             }
                           },
-                          "id": 22641,
+                          "id": 22633,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2307,7 +2307,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 22642,
+                        "id": 22634,
                         "nodeType": "ExpressionStatement",
                         "src": "859:37:10"
                       }
@@ -2318,17 +2318,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 22623,
+                    "id": 22615,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 22621,
+                      "id": 22613,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22618,
+                      "referencedDeclaration": 22610,
                       "src": "780:1:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2338,11 +2338,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<=",
                     "rightExpression": {
-                      "id": 22622,
+                      "id": 22614,
                       "name": "maxID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22612,
+                      "referencedDeclaration": 22604,
                       "src": "785:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2355,20 +2355,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 22644,
+                  "id": 22636,
                   "initializationExpression": {
                     "assignments": [
-                      22618
+                      22610
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 22618,
+                        "id": 22610,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "773:1:10",
                         "nodeType": "VariableDeclaration",
-                        "scope": 22644,
+                        "scope": 22636,
                         "src": "765:9:10",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -2377,7 +2377,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 22617,
+                          "id": 22609,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "765:7:10",
@@ -2389,10 +2389,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 22620,
+                    "id": 22612,
                     "initialValue": {
                       "hexValue": "31",
-                      "id": 22619,
+                      "id": 22611,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2411,7 +2411,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 22625,
+                      "id": 22617,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2421,11 +2421,11 @@
                       "prefix": false,
                       "src": "792:3:10",
                       "subExpression": {
-                        "id": 22624,
+                        "id": 22616,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22618,
+                        "referencedDeclaration": 22610,
                         "src": "792:1:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2437,7 +2437,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 22626,
+                    "id": 22618,
                     "nodeType": "ExpressionStatement",
                     "src": "792:3:10"
                   },
@@ -2446,17 +2446,17 @@
                 },
                 {
                   "assignments": [
-                    22646
+                    22638
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 22646,
+                      "id": 22638,
                       "mutability": "mutable",
                       "name": "runs",
                       "nameLocation": "989:4:10",
                       "nodeType": "VariableDeclaration",
-                      "scope": 22693,
+                      "scope": 22685,
                       "src": "981:12:10",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2465,7 +2465,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 22645,
+                        "id": 22637,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "981:7:10",
@@ -2477,10 +2477,10 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 22648,
+                  "id": 22640,
                   "initialValue": {
                     "hexValue": "35",
-                    "id": 22647,
+                    "id": 22639,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2499,7 +2499,7 @@
                 },
                 {
                   "body": {
-                    "id": 22670,
+                    "id": 22662,
                     "nodeType": "Block",
                     "src": "1042:74:10",
                     "statements": [
@@ -2507,11 +2507,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 22662,
+                              "id": 22654,
                               "name": "minter",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22564,
+                              "referencedDeclaration": 22556,
                               "src": "1065:6:10",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -2527,32 +2527,32 @@
                               }
                             ],
                             "expression": {
-                              "id": 22659,
+                              "id": 22651,
                               "name": "vm",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 30,
                               "src": "1056:2:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Vm_$3465",
+                                "typeIdentifier": "t_contract$_Vm_$3457",
                                 "typeString": "contract Vm"
                               }
                             },
-                            "id": 22661,
+                            "id": 22653,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "prank",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 3121,
+                            "referencedDeclaration": 3113,
                             "src": "1056:8:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                               "typeString": "function (address) external"
                             }
                           },
-                          "id": 22663,
+                          "id": 22655,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2567,7 +2567,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 22664,
+                        "id": 22656,
                         "nodeType": "ExpressionStatement",
                         "src": "1056:16:10"
                       },
@@ -2577,32 +2577,32 @@
                           "expression": {
                             "argumentTypes": [],
                             "expression": {
-                              "id": 22665,
+                              "id": 22657,
                               "name": "multimint",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22536,
+                              "referencedDeclaration": 22528,
                               "src": "1086:9:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_WebbMultimint_$22223",
+                                "typeIdentifier": "t_contract$_WebbMultimint_$22215",
                                 "typeString": "contract WebbMultimint"
                               }
                             },
-                            "id": 22667,
+                            "id": 22659,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "mintAll",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 22222,
+                            "referencedDeclaration": 22214,
                             "src": "1086:17:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
                               "typeString": "function () external"
                             }
                           },
-                          "id": 22668,
+                          "id": 22660,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2617,7 +2617,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 22669,
+                        "id": 22661,
                         "nodeType": "ExpressionStatement",
                         "src": "1086:19:10"
                       }
@@ -2628,17 +2628,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 22655,
+                    "id": 22647,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 22653,
+                      "id": 22645,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22650,
+                      "referencedDeclaration": 22642,
                       "src": "1027:1:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2648,11 +2648,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 22654,
+                      "id": 22646,
                       "name": "runs",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22646,
+                      "referencedDeclaration": 22638,
                       "src": "1031:4:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2665,20 +2665,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 22671,
+                  "id": 22663,
                   "initializationExpression": {
                     "assignments": [
-                      22650
+                      22642
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 22650,
+                        "id": 22642,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "1020:1:10",
                         "nodeType": "VariableDeclaration",
-                        "scope": 22671,
+                        "scope": 22663,
                         "src": "1012:9:10",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -2687,7 +2687,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 22649,
+                          "id": 22641,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1012:7:10",
@@ -2699,10 +2699,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 22652,
+                    "id": 22644,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 22651,
+                      "id": 22643,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2721,7 +2721,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 22657,
+                      "id": 22649,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2731,11 +2731,11 @@
                       "prefix": false,
                       "src": "1037:3:10",
                       "subExpression": {
-                        "id": 22656,
+                        "id": 22648,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22650,
+                        "referencedDeclaration": 22642,
                         "src": "1037:1:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2747,7 +2747,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 22658,
+                    "id": 22650,
                     "nodeType": "ExpressionStatement",
                     "src": "1037:3:10"
                   },
@@ -2756,7 +2756,7 @@
                 },
                 {
                   "body": {
-                    "id": 22691,
+                    "id": 22683,
                     "nodeType": "Block",
                     "src": "1163:65:10",
                     "statements": [
@@ -2766,11 +2766,11 @@
                             {
                               "arguments": [
                                 {
-                                  "id": 22685,
+                                  "id": 22677,
                                   "name": "minter",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22564,
+                                  "referencedDeclaration": 22556,
                                   "src": "1200:6:10",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
@@ -2778,11 +2778,11 @@
                                   }
                                 },
                                 {
-                                  "id": 22686,
+                                  "id": 22678,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22673,
+                                  "referencedDeclaration": 22665,
                                   "src": "1208:1:10",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -2802,32 +2802,32 @@
                                   }
                                 ],
                                 "expression": {
-                                  "id": 22683,
+                                  "id": 22675,
                                   "name": "nft",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 22533,
+                                  "referencedDeclaration": 22525,
                                   "src": "1186:3:10",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_WebbNFT_$22444",
+                                    "typeIdentifier": "t_contract$_WebbNFT_$22436",
                                     "typeString": "contract WebbNFT"
                                   }
                                 },
-                                "id": 22684,
+                                "id": 22676,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "balanceOf",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 21489,
+                                "referencedDeclaration": 21481,
                                 "src": "1186:13:10",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_external_view$_t_address_$_t_uint256_$returns$_t_uint256_$",
                                   "typeString": "function (address,uint256) view external returns (uint256)"
                                 }
                               },
-                              "id": 22687,
+                              "id": 22679,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -2843,11 +2843,11 @@
                               }
                             },
                             {
-                              "id": 22688,
+                              "id": 22680,
                               "name": "runs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 22646,
+                              "referencedDeclaration": 22638,
                               "src": "1212:4:10",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -2866,7 +2866,7 @@
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 22682,
+                            "id": 22674,
                             "name": "assertEq",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
@@ -2880,25 +2880,25 @@
                               1095,
                               1132,
                               1169,
-                              19914,
-                              19939,
-                              19969,
-                              19994,
-                              20053,
-                              20078,
-                              20108,
-                              20133,
-                              21233,
-                              21268
+                              19906,
+                              19931,
+                              19961,
+                              19986,
+                              20045,
+                              20070,
+                              20100,
+                              20125,
+                              21225,
+                              21260
                             ],
-                            "referencedDeclaration": 20108,
+                            "referencedDeclaration": 20100,
                             "src": "1177:8:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                               "typeString": "function (uint256,uint256)"
                             }
                           },
-                          "id": 22689,
+                          "id": 22681,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2913,7 +2913,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 22690,
+                        "id": 22682,
                         "nodeType": "ExpressionStatement",
                         "src": "1177:40:10"
                       }
@@ -2924,17 +2924,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 22678,
+                    "id": 22670,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 22676,
+                      "id": 22668,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22673,
+                      "referencedDeclaration": 22665,
                       "src": "1146:1:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2944,11 +2944,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<=",
                     "rightExpression": {
-                      "id": 22677,
+                      "id": 22669,
                       "name": "maxID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22612,
+                      "referencedDeclaration": 22604,
                       "src": "1151:5:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2961,20 +2961,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 22692,
+                  "id": 22684,
                   "initializationExpression": {
                     "assignments": [
-                      22673
+                      22665
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 22673,
+                        "id": 22665,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "1139:1:10",
                         "nodeType": "VariableDeclaration",
-                        "scope": 22692,
+                        "scope": 22684,
                         "src": "1131:9:10",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -2983,7 +2983,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 22672,
+                          "id": 22664,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1131:7:10",
@@ -2995,10 +2995,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 22675,
+                    "id": 22667,
                     "initialValue": {
                       "hexValue": "31",
-                      "id": 22674,
+                      "id": 22666,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3017,7 +3017,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 22680,
+                      "id": 22672,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3027,11 +3027,11 @@
                       "prefix": false,
                       "src": "1158:3:10",
                       "subExpression": {
-                        "id": 22679,
+                        "id": 22671,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22673,
+                        "referencedDeclaration": 22665,
                         "src": "1158:1:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3043,7 +3043,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 22681,
+                    "id": 22673,
                     "nodeType": "ExpressionStatement",
                     "src": "1158:3:10"
                   },
@@ -3059,18 +3059,18 @@
             "name": "testMintAll",
             "nameLocation": "692:11:10",
             "parameters": {
-              "id": 22609,
+              "id": 22601,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "703:2:10"
             },
             "returnParameters": {
-              "id": 22610,
+              "id": 22602,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "713:0:10"
             },
-            "scope": 22695,
+            "scope": 22687,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
@@ -3080,33 +3080,33 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 22529,
+              "id": 22521,
               "name": "Test",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 1554,
               "src": "190:4:10"
             },
-            "id": 22530,
+            "id": 22522,
             "nodeType": "InheritanceSpecifier",
             "src": "190:4:10"
           }
         ],
         "canonicalName": "WebbMultimintTest",
         "contractDependencies": [
-          22223,
-          22444
+          22215,
+          22436
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          22695,
+          22687,
           1554,
           235,
-          21380
+          21372
         ],
         "name": "WebbMultimintTest",
         "nameLocation": "169:17:10",
-        "scope": 22696,
+        "scope": 22688,
         "usedErrors": []
       }
     ],

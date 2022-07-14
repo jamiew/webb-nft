@@ -6,8 +6,8 @@ Free commemorative NFTs of the first images from the James Webb Space Telescope 
 
 Deployments:
 
-- Mainnet: [0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b](https://etherscan.io/address/0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b)
-- Goerli: [0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358](https://goerli.etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358)
+- Mainnet: [0xF639B4EbB77DF1ed4b5014C244F60E72B8AdB29b](https://etherscan.io/address/0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b)
+- Goerli: [0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358](https://goerli.etherscan.io/address/0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358)
 
 This repository was forked from the amazing [web3-scaffold](https://github.com/holic/web3-scaffold) at commit [b126e1e7e9](https://github.com/holic/web3-scaffold/commit/b126e1e7e9ca8acc7b8e31197dbaee2c2d7cba1c)
 

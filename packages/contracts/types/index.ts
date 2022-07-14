@@ -3,6 +3,8 @@
 /* eslint-disable */
 import type * as erc1155Sol from "./ERC1155.sol";
 export type { erc1155Sol };
+import type * as webbMultimintSol from "./WebbMultimint.sol";
+export type { webbMultimintSol };
 export type { Owned } from "./Owned";
 export type { WebbNFT } from "./WebbNFT";
 export * as factories from "./factories";
@@ -11,4 +13,8 @@ export { ERC1155__factory } from "./factories/ERC1155.sol/ERC1155__factory";
 export type { ERC1155TokenReceiver } from "./ERC1155.sol/ERC1155TokenReceiver";
 export { ERC1155TokenReceiver__factory } from "./factories/ERC1155.sol/ERC1155TokenReceiver__factory";
 export { Owned__factory } from "./factories/Owned__factory";
+export type { IWebbNFT } from "./WebbMultimint.sol/IWebbNFT";
+export { IWebbNFT__factory } from "./factories/WebbMultimint.sol/IWebbNFT__factory";
+export type { WebbMultimint } from "./WebbMultimint.sol/WebbMultimint";
+export { WebbMultimint__factory } from "./factories/WebbMultimint.sol/WebbMultimint__factory";
 export { WebbNFT__factory } from "./factories/WebbNFT__factory";

@@ -32,17 +32,21 @@ export interface WebbNFTInterface extends utils.Interface {
     "balanceOf(address,uint256)": FunctionFragment;
     "balanceOfBatch(address[],uint256[])": FunctionFragment;
     "baseURI()": FunctionFragment;
+    "enabled()": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "maxID()": FunctionFragment;
     "mint(uint256)": FunctionFragment;
+    "name()": FunctionFragment;
     "owner()": FunctionFragment;
     "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)": FunctionFragment;
     "safeTransferFrom(address,address,uint256,uint256,bytes)": FunctionFragment;
     "setApprovalForAll(address,bool)": FunctionFragment;
     "setBaseURI(string)": FunctionFragment;
+    "setEnabled(bool)": FunctionFragment;
     "setMaxID(uint256)": FunctionFragment;
     "setOwner(address)": FunctionFragment;
     "supportsInterface(bytes4)": FunctionFragment;
+    "symbol()": FunctionFragment;
     "uri(uint256)": FunctionFragment;
   };
 
@@ -51,17 +55,21 @@ export interface WebbNFTInterface extends utils.Interface {
       | "balanceOf"
       | "balanceOfBatch"
       | "baseURI"
+      | "enabled"
       | "isApprovedForAll"
       | "maxID"
       | "mint"
+      | "name"
       | "owner"
       | "safeBatchTransferFrom"
       | "safeTransferFrom"
       | "setApprovalForAll"
       | "setBaseURI"
+      | "setEnabled"
       | "setMaxID"
       | "setOwner"
       | "supportsInterface"
+      | "symbol"
       | "uri"
   ): FunctionFragment;
 
@@ -74,6 +82,7 @@ export interface WebbNFTInterface extends utils.Interface {
     values: [PromiseOrValue<string>[], PromiseOrValue<BigNumberish>[]]
   ): string;
   encodeFunctionData(functionFragment: "baseURI", values?: undefined): string;
+  encodeFunctionData(functionFragment: "enabled", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
     values: [PromiseOrValue<string>, PromiseOrValue<string>]
@@ -83,6 +92,7 @@ export interface WebbNFTInterface extends utils.Interface {
     functionFragment: "mint",
     values: [PromiseOrValue<BigNumberish>]
   ): string;
+  encodeFunctionData(functionFragment: "name", values?: undefined): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "safeBatchTransferFrom",
@@ -113,6 +123,10 @@ export interface WebbNFTInterface extends utils.Interface {
     values: [PromiseOrValue<string>]
   ): string;
   encodeFunctionData(
+    functionFragment: "setEnabled",
+    values: [PromiseOrValue<boolean>]
+  ): string;
+  encodeFunctionData(
     functionFragment: "setMaxID",
     values: [PromiseOrValue<BigNumberish>]
   ): string;
@@ -124,6 +138,7 @@ export interface WebbNFTInterface extends utils.Interface {
     functionFragment: "supportsInterface",
     values: [PromiseOrValue<BytesLike>]
   ): string;
+  encodeFunctionData(functionFragment: "symbol", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "uri",
     values: [PromiseOrValue<BigNumberish>]
@@ -135,12 +150,14 @@ export interface WebbNFTInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "baseURI", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "enabled", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "maxID", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "mint", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "safeBatchTransferFrom",
@@ -155,17 +172,20 @@ export interface WebbNFTInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "setBaseURI", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "setEnabled", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "setMaxID", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "setOwner", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "supportsInterface",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "symbol", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "uri", data: BytesLike): Result;
 
   events: {
     "ApprovalForAll(address,address,bool)": EventFragment;
     "BaseURIUpdated(string)": EventFragment;
+    "EnabledUpdated(bool)": EventFragment;
     "MaxIDUpdated(uint256)": EventFragment;
     "OwnerUpdated(address,address)": EventFragment;
     "TransferBatch(address,address,address,uint256[],uint256[])": EventFragment;
@@ -175,6 +195,7 @@ export interface WebbNFTInterface extends utils.Interface {
 
   getEvent(nameOrSignatureOrTopic: "ApprovalForAll"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "BaseURIUpdated"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "EnabledUpdated"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "MaxIDUpdated"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnerUpdated"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "TransferBatch"): EventFragment;
@@ -203,6 +224,16 @@ export type BaseURIUpdatedEvent = TypedEvent<
 >;
 
 export type BaseURIUpdatedEventFilter = TypedEventFilter<BaseURIUpdatedEvent>;
+
+export interface EnabledUpdatedEventObject {
+  newEnabled: boolean;
+}
+export type EnabledUpdatedEvent = TypedEvent<
+  [boolean],
+  EnabledUpdatedEventObject
+>;
+
+export type EnabledUpdatedEventFilter = TypedEventFilter<EnabledUpdatedEvent>;
 
 export interface MaxIDUpdatedEventObject {
   newMaxID: BigNumber;
@@ -302,6 +333,8 @@ export interface WebbNFT extends BaseContract {
 
     baseURI(overrides?: CallOverrides): Promise<[string]>;
 
+    enabled(overrides?: CallOverrides): Promise<[boolean]>;
+
     isApprovedForAll(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -314,6 +347,8 @@ export interface WebbNFT extends BaseContract {
       id: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
+
+    name(overrides?: CallOverrides): Promise<[string]>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
 
@@ -346,6 +381,11 @@ export interface WebbNFT extends BaseContract {
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
 
+    setEnabled(
+      _enabled: PromiseOrValue<boolean>,
+      overrides?: Overrides & { from?: PromiseOrValue<string> }
+    ): Promise<ContractTransaction>;
+
     setMaxID(
       _maxID: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
@@ -360,6 +400,8 @@ export interface WebbNFT extends BaseContract {
       interfaceId: PromiseOrValue<BytesLike>,
       overrides?: CallOverrides
     ): Promise<[boolean]>;
+
+    symbol(overrides?: CallOverrides): Promise<[string]>;
 
     uri(
       id: PromiseOrValue<BigNumberish>,
@@ -381,6 +423,8 @@ export interface WebbNFT extends BaseContract {
 
   baseURI(overrides?: CallOverrides): Promise<string>;
 
+  enabled(overrides?: CallOverrides): Promise<boolean>;
+
   isApprovedForAll(
     arg0: PromiseOrValue<string>,
     arg1: PromiseOrValue<string>,
@@ -393,6 +437,8 @@ export interface WebbNFT extends BaseContract {
     id: PromiseOrValue<BigNumberish>,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
+
+  name(overrides?: CallOverrides): Promise<string>;
 
   owner(overrides?: CallOverrides): Promise<string>;
 
@@ -425,6 +471,11 @@ export interface WebbNFT extends BaseContract {
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
+  setEnabled(
+    _enabled: PromiseOrValue<boolean>,
+    overrides?: Overrides & { from?: PromiseOrValue<string> }
+  ): Promise<ContractTransaction>;
+
   setMaxID(
     _maxID: PromiseOrValue<BigNumberish>,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
@@ -439,6 +490,8 @@ export interface WebbNFT extends BaseContract {
     interfaceId: PromiseOrValue<BytesLike>,
     overrides?: CallOverrides
   ): Promise<boolean>;
+
+  symbol(overrides?: CallOverrides): Promise<string>;
 
   uri(
     id: PromiseOrValue<BigNumberish>,
@@ -460,6 +513,8 @@ export interface WebbNFT extends BaseContract {
 
     baseURI(overrides?: CallOverrides): Promise<string>;
 
+    enabled(overrides?: CallOverrides): Promise<boolean>;
+
     isApprovedForAll(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -472,6 +527,8 @@ export interface WebbNFT extends BaseContract {
       id: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    name(overrides?: CallOverrides): Promise<string>;
 
     owner(overrides?: CallOverrides): Promise<string>;
 
@@ -504,6 +561,11 @@ export interface WebbNFT extends BaseContract {
       overrides?: CallOverrides
     ): Promise<void>;
 
+    setEnabled(
+      _enabled: PromiseOrValue<boolean>,
+      overrides?: CallOverrides
+    ): Promise<void>;
+
     setMaxID(
       _maxID: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
@@ -518,6 +580,8 @@ export interface WebbNFT extends BaseContract {
       interfaceId: PromiseOrValue<BytesLike>,
       overrides?: CallOverrides
     ): Promise<boolean>;
+
+    symbol(overrides?: CallOverrides): Promise<string>;
 
     uri(
       id: PromiseOrValue<BigNumberish>,
@@ -539,6 +603,9 @@ export interface WebbNFT extends BaseContract {
 
     "BaseURIUpdated(string)"(newBaseURI?: null): BaseURIUpdatedEventFilter;
     BaseURIUpdated(newBaseURI?: null): BaseURIUpdatedEventFilter;
+
+    "EnabledUpdated(bool)"(newEnabled?: null): EnabledUpdatedEventFilter;
+    EnabledUpdated(newEnabled?: null): EnabledUpdatedEventFilter;
 
     "MaxIDUpdated(uint256)"(newMaxID?: null): MaxIDUpdatedEventFilter;
     MaxIDUpdated(newMaxID?: null): MaxIDUpdatedEventFilter;
@@ -604,6 +671,8 @@ export interface WebbNFT extends BaseContract {
 
     baseURI(overrides?: CallOverrides): Promise<BigNumber>;
 
+    enabled(overrides?: CallOverrides): Promise<BigNumber>;
+
     isApprovedForAll(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -616,6 +685,8 @@ export interface WebbNFT extends BaseContract {
       id: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
+
+    name(overrides?: CallOverrides): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -648,6 +719,11 @@ export interface WebbNFT extends BaseContract {
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
 
+    setEnabled(
+      _enabled: PromiseOrValue<boolean>,
+      overrides?: Overrides & { from?: PromiseOrValue<string> }
+    ): Promise<BigNumber>;
+
     setMaxID(
       _maxID: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
@@ -662,6 +738,8 @@ export interface WebbNFT extends BaseContract {
       interfaceId: PromiseOrValue<BytesLike>,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
+
+    symbol(overrides?: CallOverrides): Promise<BigNumber>;
 
     uri(
       id: PromiseOrValue<BigNumberish>,
@@ -684,6 +762,8 @@ export interface WebbNFT extends BaseContract {
 
     baseURI(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
+    enabled(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     isApprovedForAll(
       arg0: PromiseOrValue<string>,
       arg1: PromiseOrValue<string>,
@@ -696,6 +776,8 @@ export interface WebbNFT extends BaseContract {
       id: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
+
+    name(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -728,6 +810,11 @@ export interface WebbNFT extends BaseContract {
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
 
+    setEnabled(
+      _enabled: PromiseOrValue<boolean>,
+      overrides?: Overrides & { from?: PromiseOrValue<string> }
+    ): Promise<PopulatedTransaction>;
+
     setMaxID(
       _maxID: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
@@ -742,6 +829,8 @@ export interface WebbNFT extends BaseContract {
       interfaceId: PromiseOrValue<BytesLike>,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
+
+    symbol(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     uri(
       id: PromiseOrValue<BigNumberish>,

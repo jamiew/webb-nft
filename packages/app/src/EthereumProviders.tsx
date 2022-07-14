@@ -6,11 +6,12 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 // export const targetChainId = parseInt(process.env.CHAIN_ID || "0") || 5;
-export const targetChainId = 1;
+export const targetChainId = 5;
+// export const targetChainId = 1;
+console.log({ targetChainId });
 
 export const { chains, provider, webSocketProvider } = configureChains(
-  // [chain.mainnet, chain.goerli],
-  [chain.mainnet],
+  [chain.mainnet, chain.goerli],
   [
     alchemyProvider({ alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY }),
     publicProvider(),

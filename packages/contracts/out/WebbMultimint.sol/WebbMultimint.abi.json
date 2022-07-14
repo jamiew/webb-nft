@@ -18,20 +18,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "mintAllWithBatchTransfer",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "mintAllWithTransfer",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",

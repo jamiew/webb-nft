@@ -2,5 +2,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as erc1155Sol from "./ERC1155.sol";
+export * as webbMultimintSol from "./WebbMultimint.sol";
 export { Owned__factory } from "./Owned__factory";
 export { WebbNFT__factory } from "./WebbNFT__factory";

@@ -2,13 +2,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import type { NextPage } from "next";
 
 import { About } from "../About";
-import { useWebbNFTContractRead } from "../contracts";
+import { webbMultimintContract } from "../contracts";
 import { MintButton } from "../MintButton";
-import { useIsMounted } from "../useIsMounted";
+import { NFTEntry } from "../NFTEntry";
 
 const HomePage: NextPage = () => {
-  const isMounted = useIsMounted();
-
   return (
     <div className="min-h-screen flex flex-col md:p-6 p-2 max-w-[85rem]">
       <link
@@ -26,14 +24,25 @@ const HomePage: NextPage = () => {
           className="flex-col flex-shrink md:pt-24 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-4 md:pl-8 md:pr-4"
         >
           <About />
+
+          <div className="mt-12">
+            <p>
+              <strong>✨ New! ✨</strong>
+              <br />
+              Collect all 6 images with a single txn:
+            </p>
+            <MintButton
+              contract={webbMultimintContract}
+              functionName={"mintAll"}
+              args={[]}
+              text={"Mint All"}
+              classNames={"text-lg border-2"}
+            />
+          </div>
         </div>
 
         <div className="flex-grow flex flex-col gap-4 items-center justify-center px-4 md:px-0 pt-6 pb-[10vh] max-w-[50rem] mx-auto">
-          {/* Use isMounted to temporarily workaround hydration issues where
-          server-rendered markup doesn't match the client due to localStorage
-          caching in wagmi. See https://github.com/holic/web3-scaffold/pull/26 */}
-
-          <MintButton
+          <NFTEntry
             id={1}
             title={`Galaxy cluster SMACS 0723`}
             detail={
@@ -44,7 +53,7 @@ const HomePage: NextPage = () => {
             width={1600}
             height={1632}
           />
-          <MintButton
+          <NFTEntry
             id={2}
             title="Carina Nebula"
             description={`A young, star-forming region in the nebula called NGC 3324.`}
@@ -53,7 +62,7 @@ const HomePage: NextPage = () => {
             width={1600}
             height={926}
           />
-          <MintButton
+          <NFTEntry
             id={3}
             title="Southern Ring Nebula (NIRCam)"
             description={
@@ -66,7 +75,7 @@ const HomePage: NextPage = () => {
             width={1600}
             height={1388}
           />
-          <MintButton
+          <NFTEntry
             id={4}
             title="Southern Ring Nebula (MIRI)"
             description={
@@ -79,7 +88,7 @@ const HomePage: NextPage = () => {
             width={1600}
             height={1490}
           />
-          <MintButton
+          <NFTEntry
             id={5}
             title="Stephan's Quintet (NIRCam)"
             description={"Five galaxies caught in a cosmic dance."}
@@ -90,7 +99,7 @@ const HomePage: NextPage = () => {
             width={1600}
             height={1534}
           />
-          <MintButton
+          <NFTEntry
             id={6}
             title="Stephan's Quintet (MIRI)"
             description={"Five galaxies caught in a cosmic dance."}

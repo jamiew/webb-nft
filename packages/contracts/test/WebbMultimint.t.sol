@@ -33,7 +33,7 @@ contract WebbMultimintTest is Test {
         uint256 runs = 5;
         for (uint256 i = 0; i < runs; i++) {
             vm.prank(minter);
-            multimint.mintAll();
+            multimint.mintAllWithTransfer();
 
             vm.prank(minter);
             multimint.mintAllWithBatchTransfer();

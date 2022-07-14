@@ -21,7 +21,7 @@ WebbNFT:
 
 WebbMultimint:
 
-- Mainnet: TBD
+- Mainnet: [0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358](https://etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358)
 - Goerli: [0xbe5C0c149aA303C22854927e9933c7728c9fcaEF](https://goerli.etherscan.io/address/0xbe5c0c149aa303c22854927e9933c7728c9fcaef#code)
 
 ## Setup

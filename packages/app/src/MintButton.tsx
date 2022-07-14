@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Contract } from "ethers";
 import { toast } from "react-toastify";
 import { useAccount } from "wagmi";
 
@@ -9,7 +9,7 @@ import { switchChain } from "./switchChain";
 import { usePromiseFn } from "./usePromiseFn";
 
 type Props = {
-  contract: any; // ContractFactory? i forget
+  contract: Contract;
   functionName: string;
   args: Array<unknown>;
   text: string;

@@ -28,20 +28,15 @@ contract WebbMultimintTest is Test {
             assertEq(nft.balanceOf(minter, i), 0);
         }
 
-        console.log("testMintAll, minter=", minter);
-
+        // execute multiple times for more accurate gas reports
         uint256 runs = 5;
         for (uint256 i = 0; i < runs; i++) {
             vm.prank(minter);
-            multimint.mintAllWithTransfer();
-
-            vm.prank(minter);
-            multimint.mintAllWithBatchTransfer();
+            multimint.mintAll();
         }
 
         for (uint256 i = 1; i <= maxID; i++) {
-            console.log("should have 1 of", i);
-            assertEq(nft.balanceOf(minter, i), runs * 2);
+            assertEq(nft.balanceOf(minter, i), runs);
         }
     }
 }

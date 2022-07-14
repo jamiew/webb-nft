@@ -23,20 +23,6 @@ contract WebbMultimint is ERC1155TokenReceiver {
     // │ mintAllWithBatchTransfer ┆ 73452           ┆ 73452 ┆ 73452  ┆ 73452  ┆ 5       │
     // ├╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌┤
     function mintAll() public {
-        mintAllWithBatchTransfer();
-    }
-
-    function mintAllWithTransfer() public {
-        uint256 maxID = webbNFT.maxID();
-
-        for (uint256 i = 0; i < maxID; i++) {
-            uint256 id = i + 1;
-            webbNFT.mint(id);
-            webbNFT.safeTransferFrom(address(this), msg.sender, id, 1, "");
-        }
-    }
-
-    function mintAllWithBatchTransfer() public {
         uint256 maxID = webbNFT.maxID();
         uint256[] memory ids = new uint256[](maxID);
         uint256[] memory amounts = new uint256[](maxID);

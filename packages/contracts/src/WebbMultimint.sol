@@ -45,26 +45,11 @@ contract WebbMultimint is ERC1155TokenReceiver {
     }
 }
 
+// prettier-ignore
 interface IWebbNFT {
     function mint(uint256 id) external;
-
     function owner() external returns (address);
-
     function maxID() external returns (uint256);
-
-    function safeTransferFrom(
-        address from,
-        address to,
-        uint256 id,
-        uint256 amount,
-        bytes calldata data
-    ) external;
-
-    function safeBatchTransferFrom(
-        address from,
-        address to,
-        uint256[] calldata ids,
-        uint256[] calldata amounts,
-        bytes calldata data
-    ) external;
+    function safeTransferFrom(address from, address to, uint256 id, uint256 amount, bytes calldata data) external;
+    function safeBatchTransferFrom(address from, address to, uint256[] calldata ids, uint256[] calldata amounts, bytes calldata data) external;
 }

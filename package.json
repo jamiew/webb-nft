@@ -2,8 +2,8 @@
   "name": "web3-scaffold",
   "private": true,
   "engines": {
-    "node": "16",
-    "pnpm": "7"
+    "node": "22.14.0",
+    "pnpm": ">=7"
   },
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",

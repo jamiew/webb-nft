@@ -31,7 +31,7 @@ const HomePage = () => {
             id={1}
             title={`Galaxy cluster SMACS 0723`}
             detail={
-              "https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_deep_field_smacs0723-5mb.jpg"
+              "https://science.nasa.gov/asset/webb/webbs-first-deep-field-unveiled-nircam-image/"
             }
             description={`As it appeared 4.6 billion years ago. "Webb's First Deep Field"`}
             image={"/thumbnails/1.jpg"}

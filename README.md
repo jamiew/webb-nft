@@ -2,9 +2,9 @@
 
 ![A collage of images from this collection](https://dl.dropboxusercontent.com/s/ylluedjt6ykpoa8/webb-mint-collage%2520%25281%2529.png)
 
-Free commemorative NFTs of the first images from the James Webb Space Telescope (JWST)
+Free commemorative NFTs of the first James Webb Space Telescope images, with a static Vite + React frontend.
 
-This repository was forked from the amazing [web3-scaffold](https://github.com/holic/web3-scaffold) at commit [b126e1e7e9](https://github.com/holic/web3-scaffold/commit/b126e1e7e9ca8acc7b8e31197dbaee2c2d7cba1c)
+Originally forked from [web3-scaffold](https://github.com/holic/web3-scaffold) at [b126e1e7e9](https://github.com/holic/web3-scaffold/commit/b126e1e7e9ca8acc7b8e31197dbaee2c2d7cba1c).
 
 The smart contract is an ERC-1155 built using [Solmate](https://github.com/Rari-Capital/solmate) and [Foundry (forge)](https://github.com/foundry-rs/foundry)
 
@@ -17,31 +17,29 @@ Assets are stored on the appropriately-named [Interplanetary File System (IPFS)]
 WebbNFT:
 
 - Mainnet: [0xF639B4EbB77DF1ed4b5014C244F60E72B8AdB29b](https://etherscan.io/address/0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b)
-- Goerli: [0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358](https://goerli.etherscan.io/address/0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358)
 
 WebbMultimint:
 
 - Mainnet: [0x3Ed96FC9Aeb5e987E0ef8f6B126213d33A0f1358](https://etherscan.io/address/0x3ed96fc9aeb5e987e0ef8f6b126213d33a0f1358)
-- Goerli: [0xbe5C0c149aA303C22854927e9933c7728c9fcaEF](https://goerli.etherscan.io/address/0xbe5c0c149aa303c22854927e9933c7728c9fcaef#code)
 
 ## Setup
 
-Install the [pnpm](https://pnpm.io/) package manager and run:
+Use Node 22.23.4, pnpm 12.16.1 and [Foundry 1.9.0](https://github.com/foundry-rs/foundry/releases/tag/v1.9.0):
 
 ```sh
+git submodule update --init --recursive
 pnpm install
+pnpm dev
+pnpm lint
+pnpm test
+pnpm build
 ```
 
-To build & test contracts, install [foundry](https://github.com/foundry-rs/foundry):
+The app opens at http://127.0.0.1:5173. Vercel serves `packages/app/dist`; no server or image optimizer runs in production.
 
-```sh
-cd packages/contracts
-forge test
-```
+Browser wallets only, on Ethereum mainnet. No WalletConnect, API keys or frontend environment files. Tests never broadcast transactions.
 
-To deploy contracts, check out `packages/contracts/script/WebbNFT.s.sol`
-
-There's no frontend yet
+Dependabot checks npm and GitHub Actions weekly. Contract tests compile to ignored `.forge-out`; committed `packages/contracts/out` files are historical artifacts.
 
 ## License
 

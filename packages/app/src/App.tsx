@@ -1,24 +1,15 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import type { NextPage } from "next";
+import { About } from "./About";
+import { ConnectButton } from "./EthereumProviders";
+import { MintButton } from "./MintButton";
+import { NFTEntry } from "./NFTEntry";
 
-import { About } from "../About";
-import { webbMultimintContract } from "../contracts";
-import { MintButton } from "../MintButton";
-import { NFTEntry } from "../NFTEntry";
-
-const HomePage: NextPage = () => {
+const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col md:p-6 p-2 max-w-[85rem]">
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Bitter&display=optional"
-      />
-
       <div className="self-end p-2">
         <ConnectButton />
       </div>
       <div className="md:flex md:flex-row-reverse">
-        {/* <h1 className="text-4xl"></h1> */}
         <div
           id="about"
           className="flex-col flex-shrink md:pt-24 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-4 md:pl-8 md:pr-4"
@@ -31,13 +22,7 @@ const HomePage: NextPage = () => {
               <br />
               Collect all 6 images with a single txn:
             </p>
-            <MintButton
-              contract={webbMultimintContract}
-              functionName={"mintAll"}
-              args={[]}
-              text={"Mint All"}
-              classNames={"text-lg border-2"}
-            />
+            <MintButton text={"Mint All"} classNames={"text-lg border-2"} />
           </div>
         </div>
 

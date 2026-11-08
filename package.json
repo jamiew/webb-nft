@@ -1,28 +1,27 @@
 {
   "name": "web3-scaffold",
   "private": true,
+  "packageManager": "pnpm@12.16.1",
   "engines": {
-    "node": "22.14.0",
-    "pnpm": ">=7"
+    "node": "22.x",
+    "pnpm": "12.x"
   },
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
-    "postinstall": "[ -z $CI ] && forge install || echo \"Skipping forge install for CI\"",
-    "dev": "pnpm --parallel dev",
-    "prettier": "pnpm --parallel --no-bail prettier",
-    "lint": "pnpm --parallel --no-bail lint",
-    "test": "pnpm --parallel --no-bail test"
+    "prepare": "husky",
+    "dev": "pnpm --filter @web3-scaffold/app dev",
+    "build": "pnpm --filter @web3-scaffold/app build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "prettier": "pnpm -r prettier"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "prettier": "^2.6.2",
-    "typescript": "^4.5.5",
-    "husky": "^8.0.0"
+    "@eslint/js": "10.0.1",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.14.0",
+    "husky": "9.1.7",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1"
   }
 }

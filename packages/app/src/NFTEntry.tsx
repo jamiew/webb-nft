@@ -1,6 +1,3 @@
-import Image from "next/image";
-
-import { webbNFTContract } from "./contracts";
 import { MintButton } from "./MintButton";
 
 type Props = {
@@ -39,11 +36,17 @@ export const NFTEntry = ({
       )}
 
       <div className="relative pt-2">
-        <Image src={image} width={width} height={height} alt={title} />
+        <img
+          src={image}
+          width={width}
+          height={height}
+          alt={title}
+          className="block w-full h-auto"
+          loading={id === 1 ? "eager" : "lazy"}
+          decoding="async"
+        />
         <MintButton
-          contract={webbNFTContract}
-          functionName={"mint"}
-          args={[id]}
+          tokenId={id}
           text={`Mint`}
           classNames={"absolute top-5 right-4"}
         />

@@ -4,14 +4,13 @@
 #
 # See https://github.com/holic/web3-scaffold/pull/23
 
-[default]
+[profile.default]
 src = 'packages/contracts/src'
 test = 'packages/contracts/test'
-out = 'packages/contracts/out'
-cache_path = 'packages/contracts/cache'
+out = '.forge-out'
+cache_path = '.forge-cache'
 libs = ["packages/contracts/lib", "lib"]
 verbosity = 2
 bytecode_hash = 'none'
 solc_version = '0.8.15'
 extra_output_files = ['abi']
-optimzer_runs = 2000

@@ -1,36 +1,14 @@
-import { Connector } from "wagmi";
+import type { BrowserWalletProvider } from "./wallet";
+import { parseChainId } from "./wallet";
 
-import { targetChainId } from "./EthereumProviders";
-
-// TODO: custom errors?
-
-export const switchChain = async (
-  connector: Connector,
-  chainId: number = targetChainId
-) => {
-  if (!connector) {
-    throw new Error("No wallet connected");
-  }
-
-  const provider = await connector.getProvider();
-
-  const clientName = provider.connector?.peerMeta?.name ?? "";
-  const isRainbow = /rainbow/i.test(clientName);
-
-  const currentChainId = await connector.getChainId();
-  if (currentChainId === chainId) {
+export async function switchChain(provider: BrowserWalletProvider) {
+  if (parseChainId(await provider.request({ method: "eth_chainId" })) === 1)
     return;
+  await provider.request({
+    method: "wallet_switchEthereumChain",
+    params: [{ chainId: "0x1" }],
+  });
+  if (parseChainId(await provider.request({ method: "eth_chainId" })) !== 1) {
+    throw new Error("Switch your wallet to Ethereum mainnet before minting.");
   }
-
-  // Triggering a network switch with Rainbow for a non-mainnet chain will get the
-  // Rainbow app to open, but does nothing except invisibly throw an error, which you
-  // won't see unless you tab back to the page/browser. So we'll skip it for now.
-  // TODO: file an issue/repro case about this
-  if (connector.switchChain && (!isRainbow || chainId === 1)) {
-    await connector.switchChain(chainId);
-    return;
-  }
-
-  // Likely the connected wallet doesn't support chain switching
-  throw new Error("Wrong network");
-};
+}

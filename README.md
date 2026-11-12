@@ -14,6 +14,10 @@ Assets are stored on the appropriately-named [Interplanetary File System (IPFS)]
 
 ## Deployments
 
+Live site: [webb.jamiedubs.com](https://webb.jamiedubs.com). The frontend uses React, TypeScript, Vite, Tailwind and viem.
+
+Use a wallet extension or a wallet's in-app browser on Ethereum mainnet. Minting is free, but Ethereum gas fees still apply. WalletConnect/QR connections are not supported.
+
 WebbNFT:
 
 - Mainnet: [0xF639B4EbB77DF1ed4b5014C244F60E72B8AdB29b](https://etherscan.io/address/0xf639b4ebb77df1ed4b5014c244f60e72b8adb29b)
@@ -37,11 +41,11 @@ pnpm build
 
 The app opens at http://127.0.0.1:5173. Vercel serves `packages/app/dist`; no server or image optimizer runs in production.
 
-Browser wallets only, on Ethereum mainnet. No WalletConnect, API keys or frontend environment files. Tests never broadcast transactions.
+No API keys or frontend environment files are required. Tests never broadcast transactions.
 
 Dependabot version-update PRs are disabled. Security PRs require a [repository rule](https://github.com/jamiew/webb-nft/settings/security_analysis) targeting high and critical alerts with “Open a pull request” enabled. Keep blanket Dependabot security updates disabled so the rule controls severity; lower-severity alerts remain visible. CI rejects high or critical vulnerabilities, including development dependencies.
 
-Contract tests compile to ignored `.forge-out`; generated contract artifacts are not committed.
+Contract tests compile to ignored `.forge-out`; generated contract artifacts are not committed. See the [maintenance guide](docs/START-CUSTOMIZING.md) for production checks and their limits.
 
 ## License
 

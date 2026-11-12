@@ -7,3 +7,7 @@ The frontend is a static Vite + React app, not a contract-deployment scaffold. S
 - Preview deployment scripts from the repository root against the intended RPC before broadcasting. The multimint script targets the existing mainnet NFT contract; use a mainnet RPC. Do not pass private keys on the command line or commit broadcast logs.
 
 Vercel configuration lives in `vercel.json`. Keep the project rooted at the repository root; publish `packages/app/dist`. Any new remote resource must also fit the Content Security Policy. Never add private keys to frontend environment variables or committed files.
+
+After deployment, check the gallery at desktop and phone widths, follow the image links, and try the no-wallet picker. With a test-only wallet provider, reject connection, network switching and mint approval; check account changes and local disconnect. All seven mint buttons must request Ethereum mainnet, the intended contract/token, and zero ETH value. Real wallet confirmations still incur gas.
+
+On November 8, 2026, wallet checks passed against production revision `768bef3`. The gallery fit 1440, 390 and 320-pixel viewports with no horizontal overflow; all six images loaded. Read-only `eth_call` simulations of six individual mints and Mint All also succeeded. One NASA deep-field link returned 404; its replacement was checked separately. Real wallet extensions, signed transactions and mined receipts were not exercised.

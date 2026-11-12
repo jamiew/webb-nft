@@ -168,7 +168,7 @@ export function EthereumProviders({ children }: { children: ReactNode }) {
     >
       {children}
       {connection && (
-        <div className="fixed bottom-4 right-4 z-10 rounded bg-black p-3 text-sm text-white">
+        <div className="fixed bottom-4 right-4 z-10 rounded-sm bg-black p-3 text-sm text-white">
           <span>
             {connection.wallet.name} · {connection.account.slice(0, 6)}…
             {connection.account.slice(-4)}
@@ -184,7 +184,7 @@ export function EthereumProviders({ children }: { children: ReactNode }) {
       {choosing && (
         <section
           aria-labelledby="wallet-heading"
-          className="fixed bottom-4 left-4 right-4 z-20 rounded border border-gray-600 bg-black p-5 text-white sm:left-auto sm:max-w-sm"
+          className="fixed bottom-4 left-4 right-4 z-20 rounded-sm border border-gray-600 bg-black p-5 text-white sm:left-auto sm:max-w-sm"
         >
           <h2 id="wallet-heading" className="mb-3 text-lg">
             Choose a browser wallet

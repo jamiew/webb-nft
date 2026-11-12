@@ -7,11 +7,11 @@ updates:
       day: monday
       time: "09:00"
       timezone: America/New_York
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
     groups:
-      compatible-updates:
+      security:
+        applies-to: security-updates
         patterns: ["*"]
-        update-types: [minor, patch]
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -19,6 +19,8 @@ updates:
       day: monday
       time: "09:00"
       timezone: America/New_York
+    open-pull-requests-limit: 0
     groups:
-      actions:
+      security:
+        applies-to: security-updates
         patterns: ["*"]

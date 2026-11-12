@@ -21,11 +21,11 @@ export const NFTEntry = ({
 }: Props) => {
   return (
     <div className="w-full mt-4">
-      <h2 className="title text-2xl font-bold">
+      <h2 className="text-2xl font-bold">
         {title} (#{id})
       </h2>
       {description && (
-        <p className="description">
+        <p>
           {description}{" "}
           {detail && (
             <a href={detail} target="_blank" rel="noreferrer">
@@ -47,8 +47,8 @@ export const NFTEntry = ({
         />
         <MintButton
           tokenId={id}
-          text={`Mint`}
-          classNames={"absolute top-5 right-4"}
+          text="Mint"
+          classNames="absolute top-5 right-4"
         />
       </div>
     </div>

@@ -9,22 +9,17 @@ contract WebbMultimintTest is Test {
     WebbNFT private nft;
     WebbMultimint private multimint;
 
-    address private owner =
-        vm.addr(uint256(keccak256(abi.encodePacked("owner"))));
     address private minter =
         vm.addr(uint256(keccak256(abi.encodePacked("minter"))));
 
     function setUp() public {
         nft = new WebbNFT("ipfs://hydra", 3);
-        console.log("nft", address(nft));
         multimint = new WebbMultimint(address(nft));
-        console.log("multimint", address(multimint));
     }
 
     function testMintAll() public {
         uint256 maxID = nft.maxID();
         for (uint256 i = 1; i <= maxID; i++) {
-            console.log("should have 0 of", i);
             assertEq(nft.balanceOf(minter, i), 0);
         }
 

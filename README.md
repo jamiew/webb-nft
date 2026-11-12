@@ -24,7 +24,7 @@ WebbMultimint:
 
 ## Setup
 
-Use Node 22.23.4, pnpm 12.16.1 and [Foundry 1.9.0](https://github.com/foundry-rs/foundry/releases/tag/v1.9.0):
+Use Node 22.23.4, pnpm 12.18.0 and [Foundry 1.9.0](https://github.com/foundry-rs/foundry/releases/tag/v1.9.0):
 
 ```sh
 git submodule update --init --recursive
@@ -39,7 +39,9 @@ The app opens at http://127.0.0.1:5173. Vercel serves `packages/app/dist`; no se
 
 Browser wallets only, on Ethereum mainnet. No WalletConnect, API keys or frontend environment files. Tests never broadcast transactions.
 
-Dependabot checks npm and GitHub Actions weekly. Contract tests compile to ignored `.forge-out`; committed `packages/contracts/out` files are historical artifacts.
+Dependabot version-update PRs are disabled. Security PRs require a [repository rule](https://github.com/jamiew/webb-nft/settings/security_analysis) targeting high and critical alerts with “Open a pull request” enabled. Keep blanket Dependabot security updates disabled so the rule controls severity; lower-severity alerts remain visible. CI rejects high or critical vulnerabilities, including development dependencies.
+
+Contract tests compile to ignored `.forge-out`; generated contract artifacts are not committed.
 
 ## License
 

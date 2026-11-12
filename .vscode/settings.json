@@ -1,8 +1,8 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   // improve monorepo handling
   "eslint.workingDirectories": [
@@ -18,11 +18,5 @@
   "search.exclude": {
     "packages/contracts/lib": true
   },
-  "solidity.compileUsingRemoteVersion": "v0.8.15+commit.e14f2714",
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  "solidity.compileUsingRemoteVersion": "v0.8.15+commit.e14f2714"
 }

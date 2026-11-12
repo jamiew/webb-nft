@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source("..");
+
+/* Keep the site's existing colors instead of adopting the v4 palette. */
+@theme {
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-600: #4b5563;
+  --color-slate-400: #94a3b8;
+}
 
 :root {
   --toastify-color-info: #e1e5e7;
@@ -13,9 +19,6 @@
 body {
   background-color: #fff;
   color: #000;
-  /* Fixes a bug with rainbowkit dependency package that removes the scroll bar */
-  margin-right: 0 !important;
-  padding-right: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;

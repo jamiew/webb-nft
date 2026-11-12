@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className="md:flex md:flex-row-reverse">
         <div
           id="about"
-          className="flex-col flex-shrink md:pt-24 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-4 md:pl-8 md:pr-4"
+          className="flex-col shrink md:pt-24 pt-12 max-w-[50rem] md:max-w-sm mx-auto md:mx-0 px-4 md:pl-8 md:pr-4"
         >
           <About />
 
@@ -22,11 +22,14 @@ const HomePage = () => {
               <br />
               Collect all 6 images with a single txn:
             </p>
-            <MintButton text={"Mint All"} classNames={"text-lg border-2"} />
+            <MintButton
+              text="Mint All"
+              classNames="text-lg border-2 border-gray-200"
+            />
           </div>
         </div>
 
-        <div className="flex-grow flex flex-col gap-4 items-center justify-center px-4 md:px-0 pt-6 pb-[10vh] max-w-[50rem] mx-auto">
+        <div className="grow flex flex-col gap-4 items-center justify-center px-4 md:px-0 pt-6 pb-[10vh] max-w-[50rem] mx-auto">
           <NFTEntry
             id={1}
             title={`Galaxy cluster SMACS 0723`}
